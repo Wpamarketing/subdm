@@ -1,475 +1,501 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <title>Preview</title>
-  <style>
-  </style>
-</head>
-<body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WP Marketing Software - 2025 Edition</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    /* CSS Variables for Theme */
-    :root {
-      --bg-color: #ECE5DD;         /* Light background */
-      --text-color: #075E54;       /* Dark green text */
-      --nav-bg: #075E54;           /* Navigation background */
-      --nav-text: #FFFFFF;         /* Navigation text */
-      --hero-bg: linear-gradient(135deg, #075E54, #25D366); /* Hero gradient */
-      --cta-bg: #25D366;           /* Call-to-action button */
-      --cta-hover-bg: #128C7E;     
-      --section-bg: #FFFFFF;       /* Section background */
-      --section-alt-bg: #F7F7F7;   /* Alternate section background */
-      --card-bg: #FFFFFF;          /* Pricing card background */
-      --card-border: #25D366;
-      --faq-bg: #F1F1F1;
-      --faq-border: #25D366;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubDm | Affordable Subdomains & Static Sites</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-    /* Reset & Base Styles */
-    * {
-      margin: 0; 
-      padding: 0; 
-      box-sizing: border-box; 
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      overflow-x: hidden;
-    }
-    a { color: inherit; text-decoration: none; }
-    h1, h2, h3 { margin-bottom: 20px; }
-    p { line-height: 1.6; margin-bottom: 20px; }
-
-    /* Navigation */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: var(--nav-bg);
-      padding: 15px 30px;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav .logo {
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--nav-text);
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      align-items: center;
-    }
-    nav ul li { margin-left: 20px; }
-    nav ul li a {
-      font-size: 18px;
-      color: var(--nav-text);
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-    nav ul li a:hover {
-      color: var(--cta-hover-bg);
-    }
-
-    /* Hero Section */
-    header {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      background: var(--hero-bg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-      padding: 0 20px;
-    }
-    header .hero-content {
-      z-index: 2;
-      max-width: 800px;
-    }
-    header h1 {
-      font-size: 60px;
-      margin-bottom: 20px;
-      color: var(--nav-text);
-    }
-    header p {
-      font-size: 24px;
-      margin-bottom: 30px;
-      color: var(--nav-text);
-    }
-    header button {
-      padding: 15px 40px;
-      font-size: 20px;
-      border: none;
-      border-radius: 30px;
-      background: var(--cta-bg);
-      color: var(--nav-text);
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    header button:hover {
-      background: var(--cta-hover-bg);
-    }
-
-    /* Sections */
-    .section { padding: 100px 20px; text-align: center; }
-    .section:nth-of-type(even) { background: var(--section-alt-bg); }
-    .section h2 {
-      font-size: 48px;
-      color: var(--cta-bg);
-      margin-bottom: 40px;
-    }
-
-    /* Features Section */
-    .features ul {
-      list-style: disc;
-      padding-left: 40px;
-      font-size: 20px;
-      text-align: left;
-      display: inline-block;
-    }
-    .features ul li { margin: 10px 0; }
-
-    /* Pricing Section */
-    .pricing-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
-    .price-card {
-      background: var(--card-bg);
-      width: 300px;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-      transition: transform 0.5s, box-shadow 0.5s;
-      transform-style: preserve-3d;
-      border: 2px solid var(--card-border);
-      position: relative;
-    }
-    .price-card:hover {
-      transform: translateY(-10px) rotateY(10deg);
-      box-shadow: 0 20px 30px rgba(0,0,0,0.2);
-    }
-    /* "Best Offer" Badge for Middle Plan */
-    .price-card.recommended::before {
-      content: "Best Offer";
-      position: absolute;
-      top: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--cta-bg);
-      color: var(--nav-text);
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-size: 14px;
-    }
-    /* Make middle plan bigger & highlight background */
-    .price-card.recommended {
-      background: #ebfff4; /* Light green highlight */
-      transform: scale(1.02); /* Slightly bigger by default */
-    }
-    .price-card.recommended:hover {
-      transform: translateY(-10px) rotateY(10deg) scale(1.05);
-    }
-    .price-card h3 {
-      font-size: 32px;
-      color: var(--cta-bg);
-      margin-bottom: 10px;
-    }
-    .price-card .price {
-      font-size: 24px;
-      margin-bottom: 20px;
-      color: var(--text-color);
-    }
-    .price-card ul {
-      list-style: disc;
-      text-align: left;
-      padding-left: 20px;
-      margin-bottom: 20px;
-    }
-    .price-card ul li { margin-bottom: 5px; }
-    .price-card a button {
-      padding: 12px 20px;
-      font-size: 20px;
-      border: none;
-      border-radius: 30px;
-      background: var(--cta-bg);
-      color: var(--nav-text);
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .price-card a button:hover { background: var(--cta-hover-bg); }
-
-    /* FAQ Section */
-    .faq ul {
-      list-style: none;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: left;
-    }
-    .faq ul li {
-      background: var(--faq-bg);
-      padding: 20px;
-      margin: 10px 0;
-      border-radius: 10px;
-      border-left: 5px solid var(--faq-border);
-    }
-    .faq ul li strong {
-      display: block;
-      margin-bottom: 10px;
-      font-size: 20px;
-      color: var(--cta-bg);
-    }
-
-    /* Contact Section */
-    .contact form {
-      max-width: 600px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-    }
-    .contact input, .contact textarea {
-      padding: 15px;
-      margin: 15px 0;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      font-size: 18px;
-    }
-    .contact button {
-      padding: 15px;
-      border: none;
-      border-radius: 30px;
-      background: var(--cta-bg);
-      color: var(--nav-text);
-      font-size: 20px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .contact button:hover { background: var(--cta-hover-bg); }
-
-    /* Footer */
-    footer {
-      background: var(--nav-bg);
-      padding: 40px 20px;
-      text-align: center;
-    }
-    footer p {
-      font-size: 18px;
-      color: var(--nav-text);
-    }
-
-    /* Scroll Reveal Animation */
-    .reveal {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    @media (max-width: 768px) {
-      header { height: 100vh; }
-      header h1 { font-size: 40px; }
-      header p { font-size: 18px; }
-      nav { padding: 10px 20px; }
-      .price-card { width: 90%; }
-    }
-  </style>
-</head>
-<body>
-  <!-- Navigation -->
-  <nav>
-    <div class="logo">WP Marketing 2025</div>
-    <ul>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero Section -->
-  <header>
-    <div class="hero-content reveal">
-      <h1>WP Marketing Software 2025 Edition</h1>
-      <p>Experience the next generation of WhatsApp automation &amp; marketing. Limited offer: Ends in 1 Day!</p>
-      <!-- Now linking to Pricing section -->
-      <a href="#pricing">
-        <button>Get It Now</button>
-      </a>
-    </div>
-  </header>
-
-  <!-- Features Section -->
-  <section class="section features reveal" id="features">
-    <h2>Key Features</h2>
-    <ul>
-      <li>Get Group Member</li>
-      <li>Grab WhatsApp Group Links from Web Page</li>
-      <li>WhatsApp Auto Responder Bot</li>
-      <li>Contact List Grabber</li>
-      <li>Google Map Data Extractor</li>
-      <li>Auto Group Joiner</li>
-      <li>WhatsApp Number Filter</li>
-      <li>Grab Active Group Members</li>
-      <li>Grab Chat List</li>
-      <li>Bulk Add Group Members</li>
-      <li>Group Finder</li>
-      <li>Bulk Group Generator</li>
-      <li>Google Contacts CSV Generator</li>
-      <li>Website Email Mobile Extractor</li>
-      <li>WhatsApp Warmer</li>
-      <li>Get Poll Results</li>
-      <li>Social Media Data Extractor</li>
-      <li>All Schedules</li>
-    </ul>
-  </section>
-
-  <!-- About Section -->
-  <section class="section about reveal" id="about">
-    <h2>About the Software</h2>
-    <p>
-      Introducing the <strong>2025 Edition</strong> of our WhatsApp Business Software.<br>
-      Latest, secure, and powerful features designed to boost your business.<br><br>
-      ✔️ 100% Safe &amp; Secure<br>
-      ✔️ Latest Technology Integration<br>
-      ✔️ Fast, Reliable &amp; Efficient<br><br>
-      Boost your business with the ultimate tool for WhatsApp marketing.
-    </p>
-  </section>
-
-  <!-- Pricing Section -->
-  <section class="section pricing reveal" id="pricing">
-    <h2>Pricing Plans</h2>
-    <div class="pricing-container">
-      <!-- Basic Plan -->
-      <div class="price-card">
-        <h3>Basic Plan</h3>
-        <div class="price">₹1,499 / Year</div>
-        <ul>
-          <li>Essential Features</li>
-          <li>WhatsApp Auto Responder Bot</li>
-          <li>Contact List Grabber</li>
-          <li>WhatsApp Number Filter</li>
-        </ul>
-        <!-- "Buy Now" -> WhatsApp -->
-        <a href="https://wa.me/1234567890" target="_blank">
-          <button>Buy Now</button>
-        </a>
-      </div>
-
-      <!-- Pro Plan (Best Offer) -->
-      <div class="price-card recommended">
-        <h3>Pro Plan</h3>
-        <div class="price">₹2,499 / Year</div>
-        <ul>
-          <li>All Basic Features</li>
-          <li>Google Map Data Extractor</li>
-          <li>Auto Group Joiner</li>
-          <li>Bulk Add Group Members</li>
-          <li>Priority Support</li>
-        </ul>
-        <!-- "Buy Now" -> WhatsApp -->
-        <a href="https://wa.me/1234567890" target="_blank">
-          <button>Buy Now</button>
-        </a>
-      </div>
-
-      <!-- Ultimate Plan -->
-      <div class="price-card">
-        <h3>Ultimate Plan</h3>
-        <div class="price">₹5,499 / Year</div>
-        <ul>
-          <li>All Pro Features</li>
-          <li>Grab Active Group Members</li>
-          <li>Bulk Group Generator</li>
-          <li>All Schedules + Future Updates</li>
-          <li>Dedicated Support</li>
-        </ul>
-        <!-- "Buy Now" -> WhatsApp -->
-        <a href="https://wa.me/1234567890" target="_blank">
-          <button>Buy Now</button>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="section faq reveal" id="faq">
-    <h2>Frequently Asked Questions</h2>
-    <ul>
-      <li>
-        <strong>Q: Is this software safe?</strong>
-        <p>A: Yes, it is 100% safe and secure with regular updates.</p>
-      </li>
-      <li>
-        <strong>Q: How do I install it?</strong>
-        <p>A: Installation guide will be provided after purchase.</p>
-      </li>
-      <li>
-        <strong>Q: Do you provide customer support?</strong>
-        <p>A: Yes, we offer 24/7 priority support.</p>
-      </li>
-    </ul>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="section contact reveal" id="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 WP Marketing | All Rights Reserved</p>
-  </footer>
-
-  <script>
-    // Scroll Reveal Animation using IntersectionObserver
-    const revealElements = document.querySelectorAll('.reveal');
-    const observerOptions = { threshold: 0.2 };
-    const revealOnScroll = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          observer.unobserve(entry.target);
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6', 
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    },
+                    animation: {
+                        'float-slow': 'float 8s ease-in-out infinite',
+                        'float-medium': 'float 6s ease-in-out infinite',
+                        'float-fast': 'float 4s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
         }
-      });
-    }, observerOptions);
+    </script>
 
-    revealElements.forEach(el => {
-      revealOnScroll.observe(el);
-    });
-  </script>
-</body>
-</html>
+    <style>
+        /* Smooth Background Animation */
+        .animated-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            background: linear-gradient(to bottom right, #f8fafc, #f1f5f9);
+        }
 
-<script></script>
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.6;
+            animation: floatOrb 20s infinite ease-in-out alternate;
+        }
+
+        .orb-1 {
+            top: -10%;
+            left: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: #dbeafe; /* Light Blue */
+            animation-duration: 25s;
+        }
+
+        .orb-2 {
+            bottom: -10%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: #e0e7ff; /* Indigo tint */
+            animation-duration: 22s;
+            animation-delay: -5s;
+        }
+
+        .orb-3 {
+            top: 40%;
+            left: 40%;
+            width: 30vw;
+            height: 30vw;
+            background: #f0f9ff; /* Sky tint */
+            animation-duration: 28s;
+            animation-delay: -10s;
+        }
+
+        @keyframes floatOrb {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(30px, 50px) scale(1.1); }
+        }
+
+        /* Utility Animations */
+        .fade-in { animation: fadeIn 0.6s ease-in-out forwards; }
+        .slide-up { 
+            opacity: 0; 
+            transform: translateY(20px); 
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out; 
+        }
+        .slide-up.visible { opacity: 1; transform: translateY(0); }
+        
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body class="text-slate-800 antialiased flex flex-col min-h-screen relative">
+
+    <!-- Animated Background Layer -->
+    <div class="animated-background">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/70 backdrop-blur-lg border-b border-white/20 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 cursor-pointer" onclick="navigateTo('home')">
+                    <span class="text-2xl font-bold tracking-tight text-slate-900">Sub<span class="text-brand-600">Dm</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <button onclick="navigateTo('home')" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Home</button>
+                    <button onclick="navigateTo('about')" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">About</button>
+                    <button onclick="navigateTo('terms')" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Terms</button>
+                    <button onclick="navigateTo('home', 'pricing')" class="px-5 py-2 rounded-full bg-slate-900 text-white font-medium hover:bg-slate-800 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Pricing</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 p-2">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 border-t border-slate-100 absolute w-full backdrop-blur-xl">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-lg">
+                <button onclick="navigateTo('home'); toggleMobileMenu()" class="block w-full text-left px-3 py-3 font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Home</button>
+                <button onclick="navigateTo('about'); toggleMobileMenu()" class="block w-full text-left px-3 py-3 font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">About</button>
+                <button onclick="navigateTo('terms'); toggleMobileMenu()" class="block w-full text-left px-3 py-3 font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Terms</button>
+                <button onclick="navigateTo('home', 'pricing'); toggleMobileMenu()" class="block w-full text-left px-3 py-3 font-medium text-brand-600 hover:bg-brand-50 rounded-lg">See Pricing</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow pt-16 z-10 relative">
+        
+        <!-- ==================== HOME PAGE VIEW ==================== -->
+        <div id="home-view" class="page-view">
+            
+            <!-- Hero Section -->
+            <section class="pt-20 pb-24 lg:pt-32 lg:pb-36 px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs font-semibold uppercase tracking-wide mb-8 slide-up">
+                        <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
+                        Affordable Subdomains & Static Sites
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 leading-[1.15] slide-up">
+                        Your Identity. <br/>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400">Your Subdomain.</span>
+                    </h1>
+                    
+                    <p class="mt-6 text-xl text-slate-600 mb-8 leading-relaxed slide-up max-w-2xl mx-auto">
+                        SubDm provides affordable subdomains for portfolios, landing pages, students, freelancers, and small businesses.
+                    </p>
+
+                    <div class="bg-white/60 backdrop-blur-sm border border-slate-200 rounded-lg p-4 max-w-lg mx-auto mb-10 text-sm text-slate-500 slide-up">
+                        <p class="flex items-center justify-center gap-2">
+                            <i data-lucide="info" class="w-4 h-4 text-brand-500"></i>
+                            A subdomain is a web address under a main domain, like:
+                        </p>
+                        <p class="font-mono text-slate-800 mt-2 bg-slate-100 py-2 px-4 rounded font-medium">yourname.subdm.site</p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row justify-center gap-4 slide-up">
+                        <button onclick="scrollToSection('pricing')" class="px-8 py-3.5 rounded-xl bg-brand-600 text-white font-semibold hover:bg-brand-700 transition-all shadow-lg hover:shadow-brand-500/30 transform hover:-translate-y-0.5">
+                            Get Your Subdomain
+                        </button>
+                        <button onclick="scrollToSection('features')" class="px-8 py-3.5 rounded-xl bg-white text-slate-700 border border-slate-200 font-semibold hover:bg-slate-50 transition-all hover:border-slate-300">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- What We Offer (Clarification) -->
+            <section class="py-20" id="features">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+                        
+                        <!-- Core Offer -->
+                        <div class="slide-up">
+                            <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 h-full">
+                                <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-brand-600 mb-6">
+                                    <i data-lucide="globe"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-slate-900 mb-4">What We Offer</h3>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start gap-3">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-slate-600"><strong>Premium Subdomains:</strong> Get a professional address without buying a full domain.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-slate-600"><strong>Static Pages:</strong> We build simple HTML/CSS pages for portfolios.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-slate-600"><strong>Managed for You:</strong> We handle the DNS pointing for the subdomain.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Limitations (Honest) -->
+                        <div class="slide-up">
+                            <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 h-full">
+                                <div class="w-12 h-12 bg-slate-200 rounded-2xl flex items-center justify-center text-slate-600 mb-6">
+                                    <i data-lucide="shield-alert"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-slate-900 mb-4">What We Don't Do</h3>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start gap-3">
+                                        <i data-lucide="x" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-slate-600"><strong>No Hosting:</strong> We do not provide server hosting. You connect the subdomain to your existing bucket or host.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i data-lucide="x" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-slate-600"><strong>No Complex Apps:</strong> No databases, no logins, no large e-commerce sites.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i data-lucide="x" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i>
+                                        <span class="text-slate-600"><strong>No Full Domains:</strong> We don't sell .com or .in domains.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Section -->
+            <section class="py-20" id="pricing">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4 slide-up">Simple & Affordable Pricing</h2>
+                    <p class="text-slate-600 mb-12 slide-up">Choose exactly what you need. No hidden fees.</p>
+
+                    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        
+                        <!-- Plan 1: Subdomain -->
+                        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-all relative overflow-hidden slide-up group">
+                            <div class="absolute top-0 left-0 w-full h-1 bg-brand-500"></div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Subdomain Only</h3>
+                            <p class="text-slate-500 text-sm mb-6">Perfect if you already have a site hosted elsewhere.</p>
+                            
+                            <div class="text-4xl font-extrabold text-slate-900 mb-1">₹399 <span class="text-base font-medium text-slate-500">/year</span></div>
+                            
+                            <div class="my-8 space-y-3 text-left">
+                                <p class="flex items-center text-slate-700 text-sm">
+                                    <i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i> Custom Subdomain Name
+                                </p>
+                                <p class="flex items-center text-slate-700 text-sm">
+                                    <i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i> DNS Management
+                                </p>
+                                <p class="flex items-center text-slate-700 text-sm">
+                                    <i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i> <strong>14-Day</strong> Cancellation Policy
+                                </p>
+                            </div>
+                            
+                            <button class="w-full py-3 rounded-xl bg-slate-50 text-slate-900 font-semibold hover:bg-slate-100 border border-slate-200 transition-colors">Select Subdomain</button>
+                        </div>
+
+                        <!-- Plan 2: Website Creation -->
+                        <div class="bg-slate-900 rounded-3xl p-8 shadow-xl text-white relative overflow-hidden slide-up transform md:-translate-y-4">
+                            <div class="absolute -right-10 -top-10 w-32 h-32 bg-brand-500/20 rounded-full blur-2xl"></div>
+                            
+                            <div class="inline-block px-3 py-1 rounded-full bg-brand-600 text-xs font-bold mb-4">POPULAR</div>
+                            <h3 class="text-xl font-bold mb-2">Website Creation</h3>
+                            <p class="text-slate-400 text-sm mb-6">Simple, static landing pages or portfolios.</p>
+                            
+                            <div class="flex items-baseline justify-center gap-1 mb-1">
+                                <span class="text-sm text-slate-400">Starting from</span>
+                                <span class="text-4xl font-extrabold">₹199</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-6">One-time fee</p>
+                            
+                            <div class="my-8 space-y-3 text-left border-t border-slate-800 pt-6">
+                                <p class="flex items-center text-slate-300 text-sm">
+                                    <i data-lucide="check" class="w-4 h-4 text-brand-400 mr-2"></i> Clean HTML/CSS/JS Code
+                                </p>
+                                <p class="flex items-center text-slate-300 text-sm">
+                                    <i data-lucide="check" class="w-4 h-4 text-brand-400 mr-2"></i> Responsive Mobile Design
+                                </p>
+                                <p class="flex items-center text-slate-300 text-sm">
+                                    <i data-lucide="check" class="w-4 h-4 text-brand-400 mr-2"></i> <strong>7-Day</strong> Refund Policy
+                                </p>
+                                <p class="flex items-center text-slate-300 text-xs mt-2 italic">
+                                    * 50% refund if site is already delivered
+                                </p>
+                            </div>
+                            
+                            <button class="w-full py-3 rounded-xl bg-brand-600 text-white font-semibold hover:bg-brand-500 transition-colors shadow-lg shadow-brand-900/50">Build My Site</button>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==================== ABOUT PAGE VIEW ==================== -->
+        <div id="about-view" class="page-view hidden">
+            <section class="py-20">
+                <div class="max-w-3xl mx-auto px-6">
+                    <h1 class="text-4xl font-bold text-slate-900 mb-8 text-center">About SubDm</h1>
+                    
+                    <div class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-sm border border-slate-100 space-y-6 text-lg text-slate-600 leading-relaxed">
+                        <p>
+                            SubDm was created to fill a specific gap: <strong>simplicity</strong>.
+                        </p>
+                        <p>
+                            We realized that many students, freelancers, and small businesses just need a simple address (URL) and a basic page to show their work. They don't need expensive .com domains or complex hosting plans.
+                        </p>
+                        
+                        <div class="bg-blue-50/50 p-6 rounded-2xl border border-blue-100 my-6">
+                            <h3 class="font-bold text-slate-900 mb-2">How We Work</h3>
+                            <p class="text-sm">
+                                SubDm operates as a <strong>freelancer-managed service</strong>. When you contact us, you are speaking to real developers, not a corporate bot. We build step-by-step with transparency.
+                            </p>
+                        </div>
+
+                        <p>
+                            Our goal is to provide affordable subdomains and clean, lightweight websites that load instantly on any device.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ==================== TERMS PAGE VIEW ==================== -->
+        <div id="terms-view" class="page-view hidden">
+            <section class="py-20">
+                <div class="max-w-4xl mx-auto px-6">
+                    <div class="bg-white/90 backdrop-blur-md p-8 md:p-12 rounded-3xl shadow-sm border border-slate-200">
+                        <h1 class="text-3xl font-bold text-slate-900 mb-2">Terms & Conditions</h1>
+                        <p class="text-slate-500 mb-8 text-sm">Last Updated: January 2026 | Jurisdiction: India</p>
+
+                        <div class="space-y-8 text-slate-700 text-sm md:text-base">
+                            
+                            <!-- 1. Definitions -->
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 mb-3">1. Definitions & Service Nature</h3>
+                                <p class="mb-2"><strong>"SubDm"</strong> refers to the freelancer-operated service providing subdomain allocation and static website design.</p>
+                                <p class="mb-2"><strong>"Subdomain"</strong> refers to a third-level domain (e.g., <em>user.subdm.site</em>). By subscribing, you are granted a <strong>license to use</strong> this subdomain. You do <strong>not</strong> own the domain name itself; ownership remains with SubDm.</p>
+                            </div>
+
+                            <!-- 2. Scope -->
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 mb-3">2. Service Scope & Limitations</h3>
+                                <ul class="list-disc ml-5 space-y-1 text-slate-600">
+                                    <li>We provide subdomain pointing services.</li>
+                                    <li>We create static HTML/CSS/JS web pages.</li>
+                                    <li><strong>We do NOT provide hosting.</strong> You are responsible for connecting the subdomain to your storage bucket, GitHub Pages, or hosting provider.</li>
+                                    <li>We do not build complex applications with databases or login systems.</li>
+                                </ul>
+                            </div>
+
+                            <!-- 3. Refund Policy -->
+                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                                <h3 class="text-lg font-bold text-slate-900 mb-3">3. Refund Policy (Strictly Enforced)</h3>
+                                
+                                <div class="mb-4">
+                                    <h4 class="font-semibold text-brand-700">A. For Subdomains (₹399/yr)</h4>
+                                    <p>You may cancel your subdomain subscription within <strong>14 days</strong> of purchase for a full refund. After 14 days, no refunds are provided for the remainder of the year.</p>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold text-brand-700">B. For Website Creation (Starts ₹199)</h4>
+                                    <ul class="list-disc ml-5 space-y-1">
+                                        <li><strong>100% Refund:</strong> If cancelled within 7 days AND work has not started.</li>
+                                        <li><strong>50% Refund:</strong> If work has started or the website has been delivered within the first 7 days.</li>
+                                        <li><strong>No Refund:</strong> After 7 days from payment.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- 4. User Responsibilities -->
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 mb-3">4. User Responsibilities</h3>
+                                <p>You agree not to use the subdomain for illegal activities, phishing, spam, or hosting copyrighted material without permission. SubDm reserves the right to revoke any subdomain immediately without refund if malicious activity is detected.</p>
+                            </div>
+
+                            <!-- 5. Law -->
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900 mb-3">5. Governing Law</h3>
+                                <p>These terms are governed by the laws of <strong>India</strong>. Any disputes are subject to the exclusive jurisdiction of the courts in India.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white/80 backdrop-blur-md border-t border-slate-200 py-10 mt-auto z-10 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <span class="text-xl font-bold text-slate-900">Sub<span class="text-brand-600">Dm</span></span>
+                <p class="text-sm text-slate-500 mt-1">Simple. Static. Subdomains.</p>
+            </div>
+            
+            <div class="flex gap-6 text-sm font-medium text-slate-600">
+                <button onclick="navigateTo('home')" class="hover:text-brand-600 transition-colors">Home</button>
+                <button onclick="navigateTo('about')" class="hover:text-brand-600 transition-colors">About</button>
+                <button onclick="navigateTo('terms')" class="hover:text-brand-600 transition-colors">Terms</button>
+            </div>
+
+            <div class="text-sm text-slate-400">
+                &copy; 2026 SubDm. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Router
+        function navigateTo(pageId, sectionId = null) {
+            document.querySelectorAll('.page-view').forEach(page => {
+                page.classList.add('hidden');
+                page.classList.remove('fade-in');
+            });
+
+            const selectedPage = document.getElementById(`${pageId}-view`);
+            if (selectedPage) {
+                selectedPage.classList.remove('hidden');
+                selectedPage.classList.add('fade-in');
+                
+                if (sectionId) {
+                    setTimeout(() => scrollToSection(sectionId), 100);
+                } else {
+                    window.scrollTo(0, 0);
+                }
+            }
+        }
+
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // Mobile Menu
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+        document.getElementById('mobile-menu-btn').addEventListener('click', toggleMobileMenu);
+
+        // Scroll Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.slide-up').forEach(el => observer.observe(el));
+
+        // Initial Load
+        window.addEventListener('load', () => navigateTo('home'));
+    </script>
 </body>
 </html>
