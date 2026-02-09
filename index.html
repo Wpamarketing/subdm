@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SubDm | Affordable Subdomains & Static Sites</title>
+    <title>SubDm | Smart Web Presence</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,7 +22,7 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Outfit', 'sans-serif'],
                     },
                     colors: {
                         brand: {
@@ -31,13 +31,12 @@
                             500: '#3b82f6', 
                             600: '#2563eb',
                             700: '#1d4ed8',
-                            900: '#1e3a8a',
+                            900: '#0f172a',
                         }
                     },
                     animation: {
-                        'float-slow': 'float 8s ease-in-out infinite',
-                        'float-medium': 'float 6s ease-in-out infinite',
-                        'float-fast': 'float 4s ease-in-out infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     },
                     keyframes: {
                         float: {
@@ -51,101 +50,116 @@
     </script>
 
     <style>
-        /* Smooth Background Animation */
-        .animated-background {
+        /* --- Premium Interactive Background --- */
+        .bg-canvas {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             z-index: -1;
+            background-color: #f8fafc;
             overflow: hidden;
-            background: linear-gradient(to bottom right, #f8fafc, #f1f5f9);
         }
 
-        .orb {
+        .blob {
             position: absolute;
             border-radius: 50%;
-            filter: blur(80px);
+            filter: blur(60px);
             opacity: 0.6;
-            animation: floatOrb 20s infinite ease-in-out alternate;
+            transition: transform 0.2s ease-out; /* Smooth follow */
         }
 
-        .orb-1 {
-            top: -10%;
-            left: -10%;
-            width: 50vw;
-            height: 50vw;
-            background: #dbeafe; /* Light Blue */
-            animation-duration: 25s;
+        .blob-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: #bfdbfe; }
+        .blob-2 { bottom: -10%; right: -10%; width: 40vw; height: 40vw; background: #ddd6fe; }
+        .blob-3 { top: 40%; left: 40%; width: 30vw; height: 30vw; background: #e0f2fe; opacity: 0.4; }
+
+        /* Grid Overlay */
+        .grid-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
         }
 
-        .orb-2 {
-            bottom: -10%;
-            right: -10%;
-            width: 50vw;
-            height: 50vw;
-            background: #e0e7ff; /* Indigo tint */
-            animation-duration: 22s;
-            animation-delay: -5s;
+        /* --- Glassmorphism & Card Effects --- */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
         }
 
-        .orb-3 {
-            top: 40%;
-            left: 40%;
-            width: 30vw;
-            height: 30vw;
-            background: #f0f9ff; /* Sky tint */
-            animation-duration: 28s;
-            animation-delay: -10s;
+        .tilt-card {
+            transition: transform 0.1s ease-out;
+            transform-style: preserve-3d;
         }
-
-        @keyframes floatOrb {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(30px, 50px) scale(1.1); }
-        }
-
-        /* Utility Animations */
-        .fade-in { animation: fadeIn 0.6s ease-in-out forwards; }
+        
+        /* --- Animations --- */
         .slide-up { 
             opacity: 0; 
-            transform: translateY(20px); 
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out; 
+            transform: translateY(30px); 
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); 
         }
         .slide-up.visible { opacity: 1; transform: translateY(0); }
-        
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s step-start infinite;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+
+        .shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+            transform: skewX(-20deg) translateX(-150%);
+            animation: shimmer 3s infinite;
+        }
+        @keyframes shimmer {
+            100% { transform: skewX(-20deg) translateX(150%); }
+        }
     </style>
 </head>
-<body class="text-slate-800 antialiased flex flex-col min-h-screen relative">
+<body class="text-slate-800 antialiased flex flex-col min-h-screen relative overflow-x-hidden selection:bg-brand-200">
 
-    <!-- Animated Background Layer -->
-    <div class="animated-background">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="orb orb-3"></div>
+    <!-- Interactive Background -->
+    <div class="bg-canvas" id="parallax-bg">
+        <div class="blob blob-1" data-speed="2"></div>
+        <div class="blob blob-2" data-speed="-2"></div>
+        <div class="blob blob-3" data-speed="1"></div>
+        <div class="grid-overlay"></div>
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white/70 backdrop-blur-lg border-b border-white/20 shadow-sm transition-all duration-300">
+    <nav class="fixed w-full z-50 bg-white/60 backdrop-blur-xl border-b border-white/20 transition-all duration-300 top-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
-                <div class="flex-shrink-0 cursor-pointer" onclick="navigateTo('home')">
-                    <span class="text-2xl font-bold tracking-tight text-slate-900">Sub<span class="text-brand-600">Dm</span></span>
+                <div class="flex-shrink-0 cursor-pointer group" onclick="navigateTo('home')">
+                    <span class="text-2xl font-extrabold tracking-tight text-slate-900 group-hover:text-brand-600 transition-colors">Sub<span class="text-brand-600 group-hover:text-slate-900">Dm</span>.</span>
                 </div>
                 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8">
-                    <button onclick="navigateTo('home')" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Home</button>
-                    <button onclick="navigateTo('about')" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">About</button>
-                    <button onclick="navigateTo('terms')" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Terms</button>
-                    <button onclick="navigateTo('home', 'pricing')" class="px-5 py-2 rounded-full bg-slate-900 text-white font-medium hover:bg-slate-800 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Pricing</button>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <button onclick="navigateTo('home')" class="text-slate-600 hover:text-brand-600 font-medium transition-colors text-sm uppercase tracking-wide">Home</button>
+                    <button onclick="navigateTo('about')" class="text-slate-600 hover:text-brand-600 font-medium transition-colors text-sm uppercase tracking-wide">About</button>
+                    <button onclick="navigateTo('home', 'pricing')" class="px-6 py-2 rounded-full bg-slate-900 text-white font-medium hover:bg-brand-600 transition-all shadow-lg hover:shadow-brand-500/30 transform hover:-translate-y-0.5 text-sm">Get Started</button>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 p-2">
+                    <button id="mobile-menu-btn" class="text-slate-900 p-2">
                         <i data-lucide="menu" class="h-6 w-6"></i>
                     </button>
                 </div>
@@ -154,11 +168,10 @@
 
         <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden md:hidden bg-white/95 border-t border-slate-100 absolute w-full backdrop-blur-xl">
-            <div class="px-4 pt-2 pb-6 space-y-2 shadow-lg">
-                <button onclick="navigateTo('home'); toggleMobileMenu()" class="block w-full text-left px-3 py-3 font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Home</button>
-                <button onclick="navigateTo('about'); toggleMobileMenu()" class="block w-full text-left px-3 py-3 font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">About</button>
-                <button onclick="navigateTo('terms'); toggleMobileMenu()" class="block w-full text-left px-3 py-3 font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Terms</button>
-                <button onclick="navigateTo('home', 'pricing'); toggleMobileMenu()" class="block w-full text-left px-3 py-3 font-medium text-brand-600 hover:bg-brand-50 rounded-lg">See Pricing</button>
+            <div class="px-4 pt-4 pb-6 space-y-3 shadow-2xl">
+                <button onclick="navigateTo('home'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 font-semibold text-slate-700 bg-slate-50 rounded-xl">Home</button>
+                <button onclick="navigateTo('about'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 font-semibold text-slate-700 hover:bg-slate-50 rounded-xl">About</button>
+                <button onclick="navigateTo('home', 'pricing'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 font-bold text-white bg-brand-600 rounded-xl shadow-lg">Check Pricing</button>
             </div>
         </div>
     </nav>
@@ -169,159 +182,257 @@
         <!-- ==================== HOME PAGE VIEW ==================== -->
         <div id="home-view" class="page-view">
             
-            <!-- Hero Section -->
-            <section class="pt-20 pb-24 lg:pt-32 lg:pb-36 px-4">
-                <div class="max-w-4xl mx-auto text-center">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs font-semibold uppercase tracking-wide mb-8 slide-up">
-                        <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
-                        Affordable Subdomains & Static Sites
+            <!-- Hero Section (Psychology: Simplicity + Value) -->
+            <section class="pt-24 pb-20 lg:pt-36 lg:pb-32 px-4 relative">
+                <div class="max-w-5xl mx-auto text-center">
+                    
+                    <!-- Social Proof / Urgency Badge -->
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/50 border border-brand-100 text-slate-600 text-sm font-medium shadow-sm mb-8 slide-up backdrop-blur-md hover:scale-105 transition-transform cursor-default">
+                        <span class="flex h-2 w-2 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                        </span>
+                        Accepting new portfolios for January
                     </div>
                     
-                    <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 leading-[1.15] slide-up">
-                        Your Identity. <br/>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400">Your Subdomain.</span>
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight mb-8 leading-[1.1] slide-up">
+                        Stop Overpaying.<br/>
+                        Start <span id="typewriter" class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-500 typing-cursor">Building.</span>
                     </h1>
                     
-                    <p class="mt-6 text-xl text-slate-600 mb-8 leading-relaxed slide-up max-w-2xl mx-auto">
-                        SubDm provides affordable subdomains for portfolios, landing pages, students, freelancers, and small businesses.
+                    <p class="mt-6 text-xl text-slate-600 mb-10 leading-relaxed slide-up max-w-2xl mx-auto font-light">
+                        Agencies charge ₹5000+ for simple sites. 
+                        <br class="hidden md:block">
+                        We give you a professional subdomain portfolio for <strong>less than the price of a chai per month.</strong>
                     </p>
 
-                    <div class="bg-white/60 backdrop-blur-sm border border-slate-200 rounded-lg p-4 max-w-lg mx-auto mb-10 text-sm text-slate-500 slide-up">
-                        <p class="flex items-center justify-center gap-2">
-                            <i data-lucide="info" class="w-4 h-4 text-brand-500"></i>
-                            A subdomain is a web address under a main domain, like:
-                        </p>
-                        <p class="font-mono text-slate-800 mt-2 bg-slate-100 py-2 px-4 rounded font-medium">yourname.subdm.site</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-5 slide-up">
+                        <button onclick="scrollToSection('pricing')" class="group relative px-8 py-4 rounded-xl bg-slate-900 text-white font-bold text-lg hover:bg-brand-600 transition-all shadow-xl hover:shadow-brand-500/40 transform hover:-translate-y-1 overflow-hidden shimmer">
+                            <span class="relative z-10 flex items-center gap-2">
+                                Get Started for ₹41/mo
+                                <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                            </span>
+                        </button>
+                        <button onclick="scrollToSection('comparison')" class="px-8 py-4 rounded-xl bg-white/50 text-slate-700 border border-slate-200 font-semibold hover:bg-white transition-all hover:border-slate-300 backdrop-blur-sm">
+                            Why Choose Us?
+                        </button>
                     </div>
 
-                    <div class="flex flex-col sm:flex-row justify-center gap-4 slide-up">
-                        <button onclick="scrollToSection('pricing')" class="px-8 py-3.5 rounded-xl bg-brand-600 text-white font-semibold hover:bg-brand-700 transition-all shadow-lg hover:shadow-brand-500/30 transform hover:-translate-y-0.5">
-                            Get Your Subdomain
-                        </button>
-                        <button onclick="scrollToSection('features')" class="px-8 py-3.5 rounded-xl bg-white text-slate-700 border border-slate-200 font-semibold hover:bg-slate-50 transition-all hover:border-slate-300">
-                            Learn More
-                        </button>
+                    <!-- Trust Signals -->
+                    <div class="mt-16 pt-8 border-t border-slate-200/60 max-w-3xl mx-auto slide-up">
+                        <p class="text-sm text-slate-400 uppercase tracking-widest font-semibold mb-6">Built for simplicity</p>
+                        <div class="flex justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                            <div class="flex flex-col items-center gap-2">
+                                <div class="p-3 bg-white rounded-lg shadow-sm"><i data-lucide="code-2" class="w-6 h-6 text-brand-500"></i></div>
+                                <span class="text-xs font-medium">Clean Code</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <div class="p-3 bg-white rounded-lg shadow-sm"><i data-lucide="zap" class="w-6 h-6 text-amber-500"></i></div>
+                                <span class="text-xs font-medium">Fast Load</span>
+                            </div>
+                            <div class="flex flex-col items-center gap-2">
+                                <div class="p-3 bg-white rounded-lg shadow-sm"><i data-lucide="user-check" class="w-6 h-6 text-green-500"></i></div>
+                                <span class="text-xs font-medium">Freelancer Managed</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- What We Offer (Clarification) -->
-            <section class="py-20" id="features">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+            <!-- Comparison Section (Psychology: Value Anchoring) -->
+            <section class="py-20" id="comparison">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12 slide-up">
+                        <h2 class="text-3xl font-bold text-slate-900">Why Students & Freelancers Choose SubDm</h2>
+                        <p class="text-slate-500 mt-2">See the difference yourself.</p>
+                    </div>
+
+                    <div class="glass-card rounded-2xl overflow-hidden shadow-xl slide-up">
+                        <div class="grid grid-cols-3 bg-slate-50/50 border-b border-slate-200 font-bold text-sm md:text-base text-slate-900">
+                            <div class="p-5">Feature</div>
+                            <div class="p-5 text-center text-slate-400">Typical Agency</div>
+                            <div class="p-5 text-center bg-brand-50/50 text-brand-700">SubDm</div>
+                        </div>
                         
-                        <!-- Core Offer -->
-                        <div class="slide-up">
-                            <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 h-full">
-                                <div class="w-12 h-12 bg-blue-50 rounded-2xl flex items-center justify-center text-brand-600 mb-6">
-                                    <i data-lucide="globe"></i>
-                                </div>
-                                <h3 class="text-2xl font-bold text-slate-900 mb-4">What We Offer</h3>
-                                <ul class="space-y-4">
-                                    <li class="flex items-start gap-3">
-                                        <i data-lucide="check-circle" class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5"></i>
-                                        <span class="text-slate-600"><strong>Premium Subdomains:</strong> Get a professional address without buying a full domain.</span>
-                                    </li>
-                                    <li class="flex items-start gap-3">
-                                        <i data-lucide="check-circle" class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5"></i>
-                                        <span class="text-slate-600"><strong>Static Pages:</strong> We build simple HTML/CSS pages for portfolios.</span>
-                                    </li>
-                                    <li class="flex items-start gap-3">
-                                        <i data-lucide="check-circle" class="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5"></i>
-                                        <span class="text-slate-600"><strong>Managed for You:</strong> We handle the DNS pointing for the subdomain.</span>
-                                    </li>
-                                </ul>
+                        <!-- Row 1 -->
+                        <div class="grid grid-cols-3 border-b border-slate-100 hover:bg-white/50 transition-colors">
+                            <div class="p-5 font-medium text-slate-700 flex items-center gap-2">
+                                <i data-lucide="indian-rupee" class="w-4 h-4 text-slate-400"></i> Cost
                             </div>
+                            <div class="p-5 text-center text-red-500 font-medium">₹5,000+</div>
+                            <div class="p-5 text-center text-green-600 font-bold bg-brand-50/20">₹499 / year</div>
                         </div>
 
-                        <!-- Limitations (Honest) -->
-                        <div class="slide-up">
-                            <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 h-full">
-                                <div class="w-12 h-12 bg-slate-200 rounded-2xl flex items-center justify-center text-slate-600 mb-6">
-                                    <i data-lucide="shield-alert"></i>
-                                </div>
-                                <h3 class="text-2xl font-bold text-slate-900 mb-4">What We Don't Do</h3>
-                                <ul class="space-y-4">
-                                    <li class="flex items-start gap-3">
-                                        <i data-lucide="x" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i>
-                                        <span class="text-slate-600"><strong>No Hosting:</strong> We do not provide server hosting. You connect the subdomain to your existing bucket or host.</span>
-                                    </li>
-                                    <li class="flex items-start gap-3">
-                                        <i data-lucide="x" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i>
-                                        <span class="text-slate-600"><strong>No Complex Apps:</strong> No databases, no logins, no large e-commerce sites.</span>
-                                    </li>
-                                    <li class="flex items-start gap-3">
-                                        <i data-lucide="x" class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5"></i>
-                                        <span class="text-slate-600"><strong>No Full Domains:</strong> We don't sell .com or .in domains.</span>
-                                    </li>
-                                </ul>
+                        <!-- Row 2 -->
+                        <div class="grid grid-cols-3 border-b border-slate-100 hover:bg-white/50 transition-colors">
+                            <div class="p-5 font-medium text-slate-700 flex items-center gap-2">
+                                <i data-lucide="clock" class="w-4 h-4 text-slate-400"></i> Delivery Time
                             </div>
+                            <div class="p-5 text-center text-slate-500">7-14 Days</div>
+                            <div class="p-5 text-center text-slate-900 font-medium bg-brand-50/20">~24 Hours</div>
+                        </div>
+
+                        <!-- Row 3 -->
+                        <div class="grid grid-cols-3 border-b border-slate-100 hover:bg-white/50 transition-colors">
+                            <div class="p-5 font-medium text-slate-700 flex items-center gap-2">
+                                <i data-lucide="server" class="w-4 h-4 text-slate-400"></i> Tech Headache
+                            </div>
+                            <div class="p-5 text-center text-slate-500">High (Manage hosting)</div>
+                            <div class="p-5 text-center text-green-600 font-medium bg-brand-50/20">Zero. We handle everything.</div>
+                        </div>
+
+                         <!-- Row 4 -->
+                         <div class="grid grid-cols-3 hover:bg-white/50 transition-colors">
+                            <div class="p-5 font-medium text-slate-700 flex items-center gap-2">
+                                <i data-lucide="lock" class="w-4 h-4 text-slate-400"></i> Complexity
+                            </div>
+                            <div class="p-5 text-center text-slate-500">Overkill</div>
+                            <div class="p-5 text-center text-brand-600 font-medium bg-brand-50/20">Perfectly Simple</div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Pricing Section -->
-            <section class="py-20" id="pricing">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-4 slide-up">Simple & Affordable Pricing</h2>
-                    <p class="text-slate-600 mb-12 slide-up">Choose exactly what you need. No hidden fees.</p>
+            <!-- Pricing Section (Psychology: Visualizing small daily cost) -->
+            <section class="py-20 relative" id="pricing">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="text-center mb-16 slide-up">
+                        <h2 class="text-4xl font-extrabold text-slate-900 mb-4">Investment, Not Expense.</h2>
+                        <p class="text-lg text-slate-600">Plans designed for student budgets.</p>
+                    </div>
 
                     <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                         
-                        <!-- Plan 1: Subdomain -->
-                        <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-all relative overflow-hidden slide-up group">
-                            <div class="absolute top-0 left-0 w-full h-1 bg-brand-500"></div>
-                            <h3 class="text-xl font-bold text-slate-900 mb-2">Subdomain Only</h3>
-                            <p class="text-slate-500 text-sm mb-6">Perfect if you already have a site hosted elsewhere.</p>
-                            
-                            <div class="text-4xl font-extrabold text-slate-900 mb-1">₹399 <span class="text-base font-medium text-slate-500">/year</span></div>
-                            
-                            <div class="my-8 space-y-3 text-left">
-                                <p class="flex items-center text-slate-700 text-sm">
-                                    <i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i> Custom Subdomain Name
-                                </p>
-                                <p class="flex items-center text-slate-700 text-sm">
-                                    <i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i> DNS Management
-                                </p>
-                                <p class="flex items-center text-slate-700 text-sm">
-                                    <i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i> <strong>14-Day</strong> Cancellation Policy
-                                </p>
+                        <!-- Plan 1: Student -->
+                        <div class="tilt-card glass-card rounded-3xl p-8 relative overflow-hidden group hover:border-brand-300 transition-all duration-300 slide-up">
+                            <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                                <i data-lucide="graduation-cap" class="w-24 h-24 text-slate-900"></i>
                             </div>
                             
-                            <button class="w-full py-3 rounded-xl bg-slate-50 text-slate-900 font-semibold hover:bg-slate-100 border border-slate-200 transition-colors">Select Subdomain</button>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-2">Student & Portfolio</h3>
+                            <p class="text-slate-500 text-sm mb-6">Cheaper than your monthly Netflix subscription.</p>
+                            
+                            <div class="flex items-end gap-2 mb-2">
+                                <span class="text-5xl font-extrabold text-slate-900 tracking-tight">₹41</span>
+                                <div class="flex flex-col text-xs font-medium text-slate-500 mb-2">
+                                    <span>/ month</span>
+                                    <span>(billed ₹499 yearly)</span>
+                                </div>
+                            </div>
+                            
+                            <div class="w-full h-px bg-slate-200 my-6"></div>
+
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-start gap-3">
+                                    <div class="p-1 bg-green-100 rounded-full text-green-600 mt-0.5"><i data-lucide="check" class="w-3 h-3"></i></div>
+                                    <span class="text-slate-700 text-sm"><strong>YourName.subdm.site</strong> included</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="p-1 bg-green-100 rounded-full text-green-600 mt-0.5"><i data-lucide="check" class="w-3 h-3"></i></div>
+                                    <span class="text-slate-700 text-sm"><strong>Portfolio / Resume</strong> Design</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="p-1 bg-green-100 rounded-full text-green-600 mt-0.5"><i data-lucide="check" class="w-3 h-3"></i></div>
+                                    <span class="text-slate-700 text-sm">Mobile Responsive</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="p-1 bg-green-100 rounded-full text-green-600 mt-0.5"><i data-lucide="check" class="w-3 h-3"></i></div>
+                                    <span class="text-slate-700 text-sm"> And More</span>
+                                </li>
+                               
+                            </ul>
+                            
+                            <button class="w-full py-4 rounded-xl bg-white border border-slate-200 text-slate-900 font-bold hover:bg-slate-50 hover:border-brand-300 transition-all shadow-sm group-hover:shadow-md">
+                                Choose Student Plan
+                            </button>
+                            <p class="text-center text-xs text-slate-400 mt-3">7-Day Money Back Guarantee</p>
                         </div>
 
-                        <!-- Plan 2: Website Creation -->
-                        <div class="bg-slate-900 rounded-3xl p-8 shadow-xl text-white relative overflow-hidden slide-up transform md:-translate-y-4">
-                            <div class="absolute -right-10 -top-10 w-32 h-32 bg-brand-500/20 rounded-full blur-2xl"></div>
+                        <!-- Plan 2: Business (Psychology: "Best Value" Highlight) -->
+                        <div class="tilt-card bg-slate-900 rounded-3xl p-8 relative overflow-hidden group slide-up transform md:-translate-y-4 border border-slate-700 shadow-2xl">
+                            <!-- Shine Effect -->
+                            <div class="absolute inset-0 bg-gradient-to-tr from-brand-600/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             
-                            <div class="inline-block px-3 py-1 rounded-full bg-brand-600 text-xs font-bold mb-4">POPULAR</div>
-                            <h3 class="text-xl font-bold mb-2">Website Creation</h3>
-                            <p class="text-slate-400 text-sm mb-6">Simple, static landing pages or portfolios.</p>
-                            
-                            <div class="flex items-baseline justify-center gap-1 mb-1">
-                                <span class="text-sm text-slate-400">Starting from</span>
-                                <span class="text-4xl font-extrabold">₹199</span>
-                            </div>
-                            <p class="text-xs text-slate-500 mb-6">One-time fee</p>
-                            
-                            <div class="my-8 space-y-3 text-left border-t border-slate-800 pt-6">
-                                <p class="flex items-center text-slate-300 text-sm">
-                                    <i data-lucide="check" class="w-4 h-4 text-brand-400 mr-2"></i> Clean HTML/CSS/JS Code
-                                </p>
-                                <p class="flex items-center text-slate-300 text-sm">
-                                    <i data-lucide="check" class="w-4 h-4 text-brand-400 mr-2"></i> Responsive Mobile Design
-                                </p>
-                                <p class="flex items-center text-slate-300 text-sm">
-                                    <i data-lucide="check" class="w-4 h-4 text-brand-400 mr-2"></i> <strong>7-Day</strong> Refund Policy
-                                </p>
-                                <p class="flex items-center text-slate-300 text-xs mt-2 italic">
-                                    * 50% refund if site is already delivered
-                                </p>
+                            <div class="flex justify-between items-start mb-4 relative z-10">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white">Pro & Business</h3>
+                                    <p class="text-slate-400 text-sm mt-1">For serious freelancers.</p>
+                                </div>
+                                <span class="bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse-slow">MOST POPULAR</span>
                             </div>
                             
-                            <button class="w-full py-3 rounded-xl bg-brand-600 text-white font-semibold hover:bg-brand-500 transition-colors shadow-lg shadow-brand-900/50">Build My Site</button>
+                            <div class="flex items-end gap-2 mb-2 relative z-10">
+                                <span class="text-5xl font-extrabold text-white tracking-tight">₹63</span>
+                                <div class="flex flex-col text-xs font-medium text-slate-400 mb-2">
+                                    <span>/ month</span>
+                                    <span>(billed ₹759 yearly)</span>
+                                </div>
+                            </div>
+
+                            <div class="w-full h-px bg-slate-800 my-6 relative z-10"></div>
+
+                            <ul class="space-y-4 mb-8 relative z-10">
+                                <li class="flex items-start gap-3">
+                                    <div class="p-1 bg-brand-900 border border-brand-700 rounded-full text-brand-400 mt-0.5"><i data-lucide="check" class="w-3 h-3"></i></div>
+                                    <span class="text-slate-300 text-sm"><strong>Premium Subdomain</strong> Choice</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="p-1 bg-brand-900 border border-brand-700 rounded-full text-brand-400 mt-0.5"><i data-lucide="check" class="w-3 h-3"></i></div>
+                                    <span class="text-slate-300 text-sm"><strong>Professional Business</strong> Design</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="p-1 bg-brand-900 border border-brand-700 rounded-full text-brand-400 mt-0.5"><i data-lucide="check" class="w-3 h-3"></i></div>
+                                    <span class="text-slate-300 text-sm">High-Performance Design</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="p-1 bg-brand-900 border border-brand-700 rounded-full text-brand-400 mt-0.5"><i data-lucide="check" class="w-3 h-3"></i></div>
+                                    <span class="text-slate-300 text-sm">WhatsApp/Contact Integration</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <div class="p-1 bg-brand-900 border border-brand-700 rounded-full text-brand-400 mt-0.5"><i data-lucide="check" class="w-3 h-3"></i></div>
+                                    <span class="text-slate-300 text-sm">Priority Updates & Support</span>
+                                </li>
+                            </ul>
+                            
+                            <button class="w-full py-4 rounded-xl bg-brand-600 text-white font-bold hover:bg-brand-500 transition-all shadow-lg hover:shadow-brand-500/50 relative z-10">
+                                Get Pro Access
+                            </button>
+                            <p class="text-center text-xs text-slate-500 mt-3 relative z-10">Limited slots available this month</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- Service Details Grid -->
+             <section class="py-20 bg-white/40 backdrop-blur-sm" id="features">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        
+                        <!-- Box 1 -->
+                        <div class="p-8 rounded-2xl bg-white border border-slate-100 hover:border-blue-200 transition-all hover:-translate-y-1 shadow-sm slide-up">
+                            <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-brand-600 mb-4">
+                                <i data-lucide="globe"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 mb-2">We Provide</h4>
+                            <p class="text-sm text-slate-600">A clean .subdm.site address and a coded HTML/CSS page ready to show the world.</p>
+                        </div>
+
+                        <!-- Box 2 -->
+                        <div class="p-8 rounded-2xl bg-amber-50/50 border border-amber-100 hover:border-amber-200 transition-all hover:-translate-y-1 shadow-sm slide-up">
+                            <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center text-amber-600 mb-4">
+                                <i data-lucide="hand-metal"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 mb-2">We Manage</h4>
+                            <p class="text-sm text-slate-600">Hosting is on us. We can also help you buy a full .com domain at a discount if you need one later.</p>
+                        </div>
+
+                        <!-- Box 3 -->
+                        <div class="p-8 rounded-2xl bg-white border border-slate-100 hover:border-red-200 transition-all hover:-translate-y-1 shadow-sm slide-up">
+                            <div class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 mb-4">
+                                <i data-lucide="shield-alert"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 mb-2">We Don't Do</h4>
+                            <p class="text-sm text-slate-600">No databases, no login systems, no complex apps. We keep it static and fast.</p>
                         </div>
 
                     </div>
@@ -331,28 +442,27 @@
 
         <!-- ==================== ABOUT PAGE VIEW ==================== -->
         <div id="about-view" class="page-view hidden">
-            <section class="py-20">
-                <div class="max-w-3xl mx-auto px-6">
-                    <h1 class="text-4xl font-bold text-slate-900 mb-8 text-center">About SubDm</h1>
+            <section class="py-24 px-4">
+                <div class="max-w-3xl mx-auto">
+                    <h1 class="text-4xl font-extrabold text-slate-900 mb-8 text-center">Transparent & Simple.</h1>
                     
-                    <div class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-sm border border-slate-100 space-y-6 text-lg text-slate-600 leading-relaxed">
+                    <div class="glass-card p-10 rounded-3xl text-lg text-slate-600 leading-relaxed space-y-6">
                         <p>
-                            SubDm was created to fill a specific gap: <strong>simplicity</strong>.
+                            <strong>The Problem:</strong> Most students want a portfolio but get stuck buying expensive hosting, configuring DNS, and learning WordPress.
                         </p>
                         <p>
-                            We realized that many students, freelancers, and small businesses just need a simple address (URL) and a basic page to show their work. They don't need expensive .com domains or complex hosting plans.
+                            <strong>The Solution:</strong> SubDm cuts the fat. You pay a small yearly fee. We give you the address and the page. Done.
                         </p>
                         
-                        <div class="bg-blue-50/50 p-6 rounded-2xl border border-blue-100 my-6">
-                            <h3 class="font-bold text-slate-900 mb-2">How We Work</h3>
-                            <p class="text-sm">
-                                SubDm operates as a <strong>freelancer-managed service</strong>. When you contact us, you are speaking to real developers, not a corporate bot. We build step-by-step with transparency.
-                            </p>
+                        <div class="bg-blue-50/50 p-6 rounded-2xl border border-blue-100 my-6 flex gap-4 items-start">
+                            <i data-lucide="user" class="w-6 h-6 text-brand-600 mt-1"></i>
+                            <div>
+                                <h3 class="font-bold text-slate-900">Who runs this?</h3>
+                                <p class="text-sm mt-1">
+                                    We are a small team of freelance developers. When you email us, a human replies. We believe in "less is more."
+                                </p>
+                            </div>
                         </div>
-
-                        <p>
-                            Our goal is to provide affordable subdomains and clean, lightweight websites that load instantly on any device.
-                        </p>
                     </div>
                 </div>
             </section>
@@ -360,62 +470,50 @@
 
         <!-- ==================== TERMS PAGE VIEW ==================== -->
         <div id="terms-view" class="page-view hidden">
-            <section class="py-20">
-                <div class="max-w-4xl mx-auto px-6">
-                    <div class="bg-white/90 backdrop-blur-md p-8 md:p-12 rounded-3xl shadow-sm border border-slate-200">
+            <section class="py-24 px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="glass-card p-10 rounded-3xl">
                         <h1 class="text-3xl font-bold text-slate-900 mb-2">Terms & Conditions</h1>
-                        <p class="text-slate-500 mb-8 text-sm">Last Updated: January 2026 | Jurisdiction: India</p>
-
-                        <div class="space-y-8 text-slate-700 text-sm md:text-base">
+                        <p class="text-slate-500 mb-8 text-sm">Last Updated: February 2026 | Jurisdiction: India</p>
+                        
+                        <div class="space-y-6 text-slate-700 text-sm leading-relaxed">
                             
-                            <!-- 1. Definitions -->
-                            <div>
-                                <h3 class="text-lg font-bold text-slate-900 mb-3">1. Definitions & Service Nature</h3>
-                                <p class="mb-2"><strong>"SubDm"</strong> refers to the freelancer-operated service providing subdomain allocation and static website design.</p>
-                                <p class="mb-2"><strong>"Subdomain"</strong> refers to a third-level domain (e.g., <em>user.subdm.site</em>). By subscribing, you are granted a <strong>license to use</strong> this subdomain. You do <strong>not</strong> own the domain name itself; ownership remains with SubDm.</p>
+                            <div class="p-4 bg-brand-50/50 rounded-xl border border-brand-100 mb-6">
+                                <h3 class="font-bold text-brand-900 mb-1">Freelancer Disclosure</h3>
+                                <p class="text-brand-800 text-xs">SubDm is a service operated by an independent freelancer. We aim for professional quality with a personal touch.</p>
                             </div>
 
-                            <!-- 2. Scope -->
-                            <div>
-                                <h3 class="text-lg font-bold text-slate-900 mb-3">2. Service Scope & Limitations</h3>
-                                <ul class="list-disc ml-5 space-y-1 text-slate-600">
-                                    <li>We provide subdomain pointing services.</li>
-                                    <li>We create static HTML/CSS/JS web pages.</li>
-                                    <li><strong>We do NOT provide hosting.</strong> You are responsible for connecting the subdomain to your storage bucket, GitHub Pages, or hosting provider.</li>
-                                    <li>We do not build complex applications with databases or login systems.</li>
-                                </ul>
+                            <h3 class="font-bold text-slate-900 mt-6">1. Nature of Service</h3>
+                            <p>We provide sub-domain creation (e.g., yourname.subdm.site), landing page/portfolio design, and technical configuration. We act as a service provider for setup and configuration only.</p>
+
+                            <h3 class="font-bold text-slate-900 mt-6">2. Third-Party Hosting Disclaimer</h3>
+                            <p>Hosting services are provided by third-party platforms. We assist in connecting your website and configuring settings, but we are not responsible for server downtime, performance issues, or data loss caused by the hosting provider. Users agree to the terms of the respective hosting provider.</p>
+
+                            <h3 class="font-bold text-slate-900 mt-6">3. Domain Services</h3>
+                            <p>If a custom domain is purchased, it is registered under the customer’s name and ownership belongs to the customer. We only assist with purchase and setup.</p>
+
+                            <h3 class="font-bold text-slate-900 mt-6">4. Sub-Domain Usage</h3>
+                            <p>Sub-domains provided (e.g., *.subdm.site) remain the property of our platform. Users receive usage rights during the active subscription period. We reserve the right to suspend sub-domains if the subscription expires or terms are violated.</p>
+
+                            <h3 class="font-bold text-slate-900 mt-6">5. Delivery Timeline</h3>
+                            <p>We guarantee delivery of your website draft within <strong>3 days</strong> of receiving all necessary content and details from you.</p>
+
+                            <h3 class="font-bold text-slate-900 mt-6">6. Refund Policy (7-Day Guarantee)</h3>
+                            <div class="p-3 bg-green-50 rounded-lg border border-green-100 text-green-800">
+                                <p>If you are not satisfied with our service, you may request a refund within <strong>7 days</strong> of payment. If the website has been delivered, a partial refund may apply depending on work completed, but we prioritize client satisfaction.</p>
                             </div>
 
-                            <!-- 3. Refund Policy -->
-                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
-                                <h3 class="text-lg font-bold text-slate-900 mb-3">3. Refund Policy (Strictly Enforced)</h3>
-                                
-                                <div class="mb-4">
-                                    <h4 class="font-semibold text-brand-700">A. For Subdomains (₹399/yr)</h4>
-                                    <p>You may cancel your subdomain subscription within <strong>14 days</strong> of purchase for a full refund. After 14 days, no refunds are provided for the remainder of the year.</p>
-                                </div>
+                            <h3 class="font-bold text-slate-900 mt-6">7. Subscription Validity</h3>
+                            <p>All plans are valid for 1 year. If not renewed, the sub-domain and website may be suspended, and data deleted after a reasonable period.</p>
 
-                                <div>
-                                    <h4 class="font-semibold text-brand-700">B. For Website Creation (Starts ₹199)</h4>
-                                    <ul class="list-disc ml-5 space-y-1">
-                                        <li><strong>100% Refund:</strong> If cancelled within 7 days AND work has not started.</li>
-                                        <li><strong>50% Refund:</strong> If work has started or the website has been delivered within the first 7 days.</li>
-                                        <li><strong>No Refund:</strong> After 7 days from payment.</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <h3 class="font-bold text-slate-900 mt-6">8. Content Responsibility</h3>
+                            <p>Users are responsible for all content. Illegal activities, copyright infringement, adult material, fraud, hate speech, or harmful content are strictly prohibited.</p>
 
-                            <!-- 4. User Responsibilities -->
-                            <div>
-                                <h3 class="text-lg font-bold text-slate-900 mb-3">4. User Responsibilities</h3>
-                                <p>You agree not to use the subdomain for illegal activities, phishing, spam, or hosting copyrighted material without permission. SubDm reserves the right to revoke any subdomain immediately without refund if malicious activity is detected.</p>
-                            </div>
+                            <h3 class="font-bold text-slate-900 mt-6">9. Governing Law</h3>
+                            <p>These Terms are governed by the laws of <strong>India</strong>. Any disputes are subject to the exclusive jurisdiction of the courts in India.</p>
 
-                            <!-- 5. Law -->
-                            <div>
-                                <h3 class="text-lg font-bold text-slate-900 mb-3">5. Governing Law</h3>
-                                <p>These terms are governed by the laws of <strong>India</strong>. Any disputes are subject to the exclusive jurisdiction of the courts in India.</p>
-                            </div>
+                            <h3 class="font-bold text-slate-900 mt-6">10. Contact</h3>
+                            <p>For support: Email us at support@subdm.site</p>
 
                         </div>
                     </div>
@@ -426,21 +524,21 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white/80 backdrop-blur-md border-t border-slate-200 py-10 mt-auto z-10 relative">
+    <footer class="bg-white/40 backdrop-blur-md border-t border-slate-200 py-12 mt-auto z-10 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left">
-                <span class="text-xl font-bold text-slate-900">Sub<span class="text-brand-600">Dm</span></span>
-                <p class="text-sm text-slate-500 mt-1">Simple. Static. Subdomains.</p>
+                <span class="text-xl font-black text-slate-900">Sub<span class="text-brand-600">Dm</span>.</span>
+                <p class="text-sm text-slate-500 mt-1">Made for builders.</p>
             </div>
             
-            <div class="flex gap-6 text-sm font-medium text-slate-600">
+            <div class="flex gap-8 text-sm font-bold text-slate-600">
                 <button onclick="navigateTo('home')" class="hover:text-brand-600 transition-colors">Home</button>
                 <button onclick="navigateTo('about')" class="hover:text-brand-600 transition-colors">About</button>
                 <button onclick="navigateTo('terms')" class="hover:text-brand-600 transition-colors">Terms</button>
             </div>
 
-            <div class="text-sm text-slate-400">
-                &copy; 2026 SubDm. All rights reserved.
+            <div class="text-sm text-slate-400 font-medium">
+                &copy; 2026 SubDm. By Manish
             </div>
         </div>
     </footer>
@@ -450,7 +548,81 @@
         // Initialize Icons
         lucide.createIcons();
 
-        // Router
+        // --- Typing Animation Logic ---
+        const textToType = ["Building.", "Creating.", "Freelancing.", "Saving."];
+        let typeIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        
+        function typeEffect() {
+            const currentWord = textToType[typeIndex];
+            const typeElement = document.getElementById('typewriter');
+            
+            if(!typeElement) return;
+
+            if (isDeleting) {
+                typeElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typeElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 100 : 150;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                typeSpeed = 2000; // Pause at end
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                typeIndex = (typeIndex + 1) % textToType.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeEffect, typeSpeed);
+        }
+
+        // --- 3D Tilt Effect ---
+        function initTilt() {
+            const cards = document.querySelectorAll('.tilt-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    
+                    const rotateX = ((y - centerY) / centerY) * -5; // Max 5deg
+                    const rotateY = ((x - centerX) / centerX) * 5;
+
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                });
+
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+                });
+            });
+        }
+
+        // --- Parallax Background ---
+        document.addEventListener('mousemove', (e) => {
+            const blobs = document.querySelectorAll('.blob');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+
+            blobs.forEach(blob => {
+                const speed = blob.getAttribute('data-speed');
+                const xOffset = (window.innerWidth - e.clientX * speed) / 100;
+                const yOffset = (window.innerHeight - e.clientY * speed) / 100;
+                
+                blob.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+            });
+        });
+
+        // --- Router ---
         function navigateTo(pageId, sectionId = null) {
             document.querySelectorAll('.page-view').forEach(page => {
                 page.classList.add('hidden');
@@ -477,13 +649,12 @@
             }
         }
 
-        // Mobile Menu
         function toggleMobileMenu() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         }
         document.getElementById('mobile-menu-btn').addEventListener('click', toggleMobileMenu);
 
-        // Scroll Animations
+        // --- Intersection Observer for Animations ---
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -494,8 +665,12 @@
 
         document.querySelectorAll('.slide-up').forEach(el => observer.observe(el));
 
-        // Initial Load
-        window.addEventListener('load', () => navigateTo('home'));
+        // --- Init ---
+        window.addEventListener('load', () => {
+            navigateTo('home');
+            typeEffect();
+            initTilt();
+        });
     </script>
 </body>
 </html>
