@@ -3,7 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SubDm | Smart Web Presence</title>
+    <title>SubDm | M. Tech</title>
+    
+    <!-- Advanced SEO & Meta Tags -->
+    <meta name="description" content="SubDm provides affordable custom websites, business landing pages, and subdomains for students, freelancers, and small businesses. Pay after your site is live and you're satisfied.">
+    <meta name="keywords" content="affordable website design, cheap subdomain, student portfolio, freelancer resume website, business landing page, website creator India, simple web presence">
+    <meta name="author" content="SubDm by Manish">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph (Social Sharing) -->
+    <meta property="og:title" content="SubDm | Smart Web Presence for Builders">
+    <meta property="og:description" content="Stop overpaying for websites. Get a professional subdomain, portfolio, or landing page for a fraction of the cost.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://subdm.site">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SubDm",
+      "url": "https://subdm.site",
+      "description": "Affordable subdomains and static websites for students and businesses.",
+      "founder": {
+        "@type": "Person",
+        "name": "Manish"
+      },
+      "priceRange": "₹349 - ₹599+",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,6 +101,7 @@
             filter: blur(60px);
             opacity: 0.6;
             transition: transform 0.2s ease-out; /* Smooth follow */
+            will-change: transform;
         }
 
         .blob-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: #bfdbfe; }
@@ -98,6 +132,7 @@
         .tilt-card {
             transition: transform 0.1s ease-out;
             transform-style: preserve-3d;
+            will-change: transform;
         }
         
         /* --- Animations --- */
@@ -105,6 +140,7 @@
             opacity: 0; 
             transform: translateY(30px); 
             transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); 
+            will-change: opacity, transform;
         }
         .slide-up.visible { opacity: 1; transform: translateY(0); }
 
@@ -202,11 +238,21 @@
                         Start <span id="typewriter" class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-500 typing-cursor">Building.</span>
                     </h1>
                     
-                    <p class="mt-6 text-xl text-slate-600 mb-10 leading-relaxed slide-up max-w-2xl mx-auto font-light">
+                    <p class="mt-6 text-xl text-slate-600 mb-6 leading-relaxed slide-up max-w-2xl mx-auto font-light">
                         Agencies charge ₹5000+ for simple sites. 
                         <br class="hidden md:block">
                         We give you a professional subdomain portfolio for <strong>a fraction of the cost.</strong>
                     </p>
+
+                    <!-- Trust Guarantee Banner -->
+                    <div class="mb-10 inline-block p-[2px] rounded-2xl bg-gradient-to-r from-green-400 to-brand-500 slide-up shadow-lg hover:scale-105 transition-transform duration-300">
+                        <div class="bg-white/95 backdrop-blur-md px-6 py-3 rounded-[14px]">
+                            <p class="text-slate-900 font-bold flex items-center gap-2 text-sm md:text-base">
+                                <i data-lucide="shield-check" class="text-green-500 w-6 h-6"></i>
+                                Pay after your site is live and working and you're satisfied
+                            </p>
+                        </div>
+                    </div>
 
                     <div class="flex flex-col sm:flex-row justify-center gap-5 slide-up">
                         <button onclick="scrollToSection('pricing')" class="group relative px-8 py-4 rounded-xl bg-slate-900 text-white font-bold text-lg hover:bg-brand-600 transition-all shadow-xl hover:shadow-brand-500/40 transform hover:-translate-y-1 overflow-hidden shimmer">
@@ -327,8 +373,13 @@
                                 <li class="flex items-start gap-2 text-slate-700 text-sm font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i> Fast loading</li>
                             </ul>
                             
-                            <div class="mt-auto bg-brand-50 text-brand-700 text-xs font-bold px-3 py-2.5 rounded-lg text-center border border-brand-200 shadow-sm">
-                                Special for Personal use
+                            <div class="mt-auto w-full">
+                                <div class="bg-brand-50 text-brand-700 text-xs font-bold px-3 py-2.5 rounded-lg text-center border border-brand-200 shadow-sm mb-3">
+                                    Special for Personal use
+                                </div>
+                                <a href="https://wa.me/8562094396749" target="_blank" class="w-full flex justify-center items-center gap-2 py-3 rounded-xl bg-brand-600 text-white font-bold hover:bg-brand-700 transition-all shadow-md transform hover:-translate-y-1">
+                                    <i data-lucide="message-circle" class="w-4 h-4"></i> Contact on WhatsApp
+                                </a>
                             </div>
                         </div>
 
@@ -349,8 +400,13 @@
                                 <li class="flex items-start gap-2 text-slate-700 text-sm font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i> Mobile optimized</li>
                             </ul>
                             
-                            <div class="mt-auto bg-slate-100 text-slate-700 text-xs font-bold px-3 py-2.5 rounded-lg text-center border border-slate-200">
-                                Best for new or small Business
+                            <div class="mt-auto w-full">
+                                <div class="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-2.5 rounded-lg text-center border border-slate-200 mb-3">
+                                    Best for new or small Business
+                                </div>
+                                <a href="https://wa.me/8562094396749" target="_blank" class="w-full flex justify-center items-center gap-2 py-3 rounded-xl bg-slate-900 text-white font-bold hover:bg-slate-800 transition-all shadow-md transform hover:-translate-y-1">
+                                    <i data-lucide="message-circle" class="w-4 h-4"></i> Contact on WhatsApp
+                                </a>
                             </div>
                         </div>
 
@@ -371,8 +427,10 @@
                                 <li class="flex items-start gap-2 text-slate-700 text-sm font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i> Basic setup</li>
                             </ul>
                             
-                            <div class="mt-auto opacity-0 bg-transparent px-3 py-2.5">
-                                <!-- Invisible placeholder to align with other cards -->
+                            <div class="mt-auto w-full">
+                                <a href="https://wa.me/8562094396749" target="_blank" class="w-full flex justify-center items-center gap-2 py-3 rounded-xl bg-slate-900 text-white font-bold hover:bg-slate-800 transition-all shadow-md transform hover:-translate-y-1">
+                                    <i data-lucide="message-circle" class="w-4 h-4"></i> Contact on WhatsApp
+                                </a>
                             </div>
                         </div>
 
@@ -398,8 +456,10 @@
                                 <li class="flex items-start gap-2 text-slate-700 text-sm font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i> Basic setup</li>
                             </ul>
                             
-                            <div class="mt-auto opacity-0 bg-transparent px-3 py-2.5">
-                                <!-- Invisible placeholder to align with other cards -->
+                            <div class="mt-auto w-full">
+                                <a href="https://wa.me/8562094396749" target="_blank" class="w-full flex justify-center items-center gap-2 py-3 rounded-xl bg-slate-900 text-white font-bold hover:bg-slate-800 transition-all shadow-md transform hover:-translate-y-1">
+                                    <i data-lucide="message-circle" class="w-4 h-4"></i> Contact on WhatsApp
+                                </a>
                             </div>
                         </div>
 
