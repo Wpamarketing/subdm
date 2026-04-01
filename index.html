@@ -1,735 +1,2638 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SubDm | M. Tech</title>
     
-    <!-- Advanced SEO & Meta Tags -->
-    <meta name="description" content="SubDm provides affordable custom websites, business landing pages, and subdomains for students, freelancers, and small businesses. Pay after your site is live and you're satisfied.">
-    <meta name="keywords" content="affordable website design, cheap subdomain, student portfolio, freelancer resume website, business landing page, website creator India, simple web presence">
-    <meta name="author" content="SubDm by Manish">
-    <meta name="robots" content="index, follow">
+    <!-- Enhanced SEO Meta Tags -->
+    <meta name="description" content="SubDM - Professional subdomain websites & hosting starting at ₹99/mo. Get yourname.subdm.site with SSL, 99.9% uptime. Perfect for students, freelancers & businesses. Setup in 24-48 hours.">
+    <meta name="keywords" content="subdomain website, subdomain hosting, subdm.site subdomain, portfolio website, landing page, affordable web hosting, SubDM, cheap hosting India, student website, business website, ₹99 hosting">
+    <meta name="author" content="SubDM by M Technology">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://subdm.site/">
     
-    <!-- Open Graph (Social Sharing) -->
-    <meta property="og:title" content="SubDm | Smart Web Presence for Builders">
-    <meta property="og:description" content="Stop overpaying for websites. Get a professional subdomain, portfolio, or landing page for a fraction of the cost.">
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://subdm.site">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:url" content="https://subdm.site/">
+    <meta property="og:title" content="SubDM - Professional Subdomain Websites & Hosting from ₹99/mo">
+    <meta property="og:description" content="Get your own professional subdomain (yourname.subdm.site) with SSL, 99.9% uptime. Perfect for students, freelancers & small businesses.">
+    <meta property="og:image" content="https://subdm.site/og-image.png">
+    <meta property="og:site_name" content="SubDM">
+    <meta property="og:locale" content="en_IN">
     
-    <!-- JSON-LD Schema Markup -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://subdm.site/">
+    <meta name="twitter:title" content="SubDM - Professional Subdomain Websites & Hosting">
+    <meta name="twitter:description" content="Get yourname.subdm.site with SSL & 99.9% uptime starting ₹99/mo">
+    <meta name="twitter:image" content="https://subdm.site/og-image.png">
+    
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#000000">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Structured Data - Organization -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "SubDm",
-      "url": "https://subdm.site",
-      "description": "Affordable subdomains and static websites for students and businesses.",
-      "founder": {
-        "@type": "Person",
-        "name": "Manish"
-      },
-      "priceRange": "₹349 - ₹599+",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "IN"
-      }
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SubDM",
+        "url": "https://subdm.site",
+        "logo": "https://subdm.site/logo.png",
+        "description": "Professional subdomain websites and hosting services",
+        "parentOrganization": {
+            "@type": "Organization",
+            "name": "M Technology",
+            "url": "https://mtechnology.dev"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": ["English", "Hindi"]
+        }
     }
     </script>
     
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Structured Data - Product/Service -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "SubDM Subdomain Hosting",
+        "description": "Professional subdomain website hosting with SSL and 99.9% uptime",
+        "brand": {"@type": "Brand", "name": "SubDM"},
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Subdomain",
+                "price": "99",
+                "priceCurrency": "INR",
+                "priceValidUntil": "2027-12-31",
+                "availability": "https://schema.org/InStock",
+                "url": "https://subdm.site/#pricing"
+            },
+            {
+                "@type": "Offer",
+                "name": "Monthly Hosting",
+                "price": "199",
+                "priceCurrency": "INR",
+                "priceValidUntil": "2027-12-31",
+                "availability": "https://schema.org/InStock",
+                "url": "https://subdm.site/#pricing"
+            }
+        ]
+    }
+    </script>
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- Custom Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Outfit', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            500: '#3b82f6', 
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            900: '#0f172a',
-                        }
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        }
-                    }
+    <!-- Structured Data - FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Do I need hosting?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No, we handle everything for you. We connect your website to third-party hosting platforms and manage all the technical setup."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is SSL certificate included?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "100% included. All SubDM websites come with a free SSL certificate for secure HTTPS connections."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does setup take?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "24-48 hours from the time you place your order."
                 }
             }
-        }
+        ]
+    }
     </script>
-
+    
+    <title>SubDM - Professional Subdomain Websites & Hosting from ₹99/mo | subdm.site</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* --- Premium Interactive Background --- */
-        .bg-canvas {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Monochrome palette */
+            --white: #ffffff;
+            --silver: #a0a0a0;
+            --silver-light: #c0c0c0;
+            --silver-dark: #707070;
+            --black: #000000;
+            --black-soft: #0a0a0a;
+            --black-card: #111111;
+            
+            /* Accent for effects only */
+            --accent: #00d4ff;
+            --accent-glow: rgba(0, 212, 255, 0.3);
+            
+            /* Dark Mode (default) */
+            --bg: #000000;
+            --bg-card: #0a0a0a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        body.light-mode {
+            --bg: #ffffff;
+            --bg-card: #f5f5f5;
+            --text-primary: #000000;
+            --text-secondary: #606060;
+            --border: rgba(0, 0, 0, 0.1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            transition: background-color 0.5s ease, color 0.5s ease;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Subtle grid background */
+        .bg-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(var(--border) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border) 1px, transparent 1px);
+            background-size: 80px 80px;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        /* Particle Canvas */
+        #particles-canvas {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            pointer-events: none;
             z-index: -1;
-            background-color: #f8fafc;
-            overflow: hidden;
         }
 
-        .blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(60px);
-            opacity: 0.6;
-            transition: transform 0.2s ease-out; /* Smooth follow */
-            will-change: transform;
+        /* Glass Card */
+        .glass {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .blob-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: #bfdbfe; }
-        .blob-2 { bottom: -10%; right: -10%; width: 40vw; height: 40vw; background: #ddd6fe; }
-        .blob-3 { top: 40%; left: 40%; width: 30vw; height: 30vw; background: #e0f2fe; opacity: 0.4; }
+        .glass:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 30px var(--accent-glow);
+        }
 
-        /* Grid Overlay */
-        .grid-overlay {
+        /* SVG Icons */
+        .icon {
+            width: 24px;
+            height: 24px;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+
+        .icon-lg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .icon-xl {
+            width: 48px;
+            height: 48px;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            background: rgba(0, 0, 0, 0.8);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.4s ease;
+        }
+
+        header.scrolled {
+            background: rgba(0, 0, 0, 0.95);
+        }
+
+        body.light-mode header {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        body.light-mode header.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: -0.02em;
+        }
+
+        .logo:hover {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
             position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-links a:hover::after {
             width: 100%;
-            height: 100%;
-            background-image: 
-                linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
-            background-size: 40px 40px;
-            mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
         }
 
-        /* --- Glassmorphism & Card Effects --- */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        .theme-toggle {
+            width: 48px;
+            height: 26px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 13px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            padding: 2px;
         }
 
-        .tilt-card {
-            transition: transform 0.1s ease-out;
-            transform-style: preserve-3d;
-            will-change: transform;
+        .theme-toggle span {
+            width: 22px;
+            height: 22px;
+            background: var(--text-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
-        
-        /* --- Animations --- */
-        .slide-up { 
-            opacity: 0; 
-            transform: translateY(30px); 
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); 
-            will-change: opacity, transform;
-        }
-        .slide-up.visible { opacity: 1; transform: translateY(0); }
 
-        .typing-cursor::after {
-            content: '|';
-            animation: blink 1s step-start infinite;
+        .theme-toggle span svg {
+            width: 14px;
+            height: 14px;
+            stroke: var(--bg);
         }
-        @keyframes blink { 50% { opacity: 0; } }
 
-        .shimmer {
+        body.light-mode .theme-toggle span {
+            transform: translateX(22px);
+        }
+
+        /* Mobile menu */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-menu-btn span {
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 6rem 0;
+            scroll-margin-top: 80px;
+            position: relative;
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            min-height: calc(100vh - 70px);
+            display: flex;
+            align-items: center;
             position: relative;
             overflow: hidden;
         }
-        .shimmer::after {
+
+        .hero-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+        }
+
+        .hero-content h1 .accent-text {
+            color: var(--accent);
+        }
+
+        .hero-content h1 .gradient-text {
+            color: var(--accent);
+        }
+
+        .hero-content h1 .highlight {
+            position: relative;
+            display: inline-block;
+            color: var(--accent);
+        }
+
+        .hero-content h1 .highlight::after {
             content: '';
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
-            transform: skewX(-20deg) translateX(-150%);
-            animation: shimmer 3s infinite;
+            bottom: 4px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: var(--accent);
+            opacity: 0.3;
+            z-index: -1;
+            border-radius: 2px;
         }
-        @keyframes shimmer {
-            100% { transform: skewX(-20deg) translateX(150%); }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .trust-badges {
+            display: flex;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            padding: 0.4rem 0.75rem;
+            background: var(--bg-card);
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .trust-badge-item:hover {
+            border-color: var(--accent);
+        }
+
+        .trust-badge-item .icon {
+            width: 16px;
+            height: 16px;
+            color: var(--accent);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* Enhanced Buttons */
+        .button {
+            padding: 0.875rem 1.75rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .button-primary {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .button-primary:hover {
+            background: var(--silver-light);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .button-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .button-secondary:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* Hero Visual */
+        .hero-visual {
+            position: relative;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-card-stack {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-card {
+            position: absolute;
+            width: 85%;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            animation: float 6s ease-in-out infinite;
+            transition: all 0.4s ease;
+        }
+
+        .hero-card:nth-child(1) {
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+            z-index: 3;
+        }
+
+        .hero-card:nth-child(2) {
+            top: 20%;
+            left: 12%;
+            animation-delay: -2s;
+            z-index: 2;
+            opacity: 0.5;
+            transform: scale(0.95);
+        }
+
+        .hero-card:nth-child(3) {
+            top: 30%;
+            left: 20%;
+            animation-delay: -4s;
+            z-index: 1;
+            opacity: 0.3;
+            transform: scale(0.9);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .hero-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 40px var(--accent-glow);
+        }
+
+        .hero-card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-card-avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--text-primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--bg);
+            font-size: 1rem;
+        }
+
+        .hero-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.15rem;
+        }
+
+        .hero-card-domain {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .hero-card-content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .hero-card-stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0.75rem;
+            background: var(--bg);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            font-size: 0.85rem;
+        }
+
+        .hero-card-stat span:first-child {
+            color: var(--text-secondary);
+        }
+
+        .hero-card-stat span:last-child {
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .status-live {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .status-live::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse-live 2s infinite;
+        }
+
+        @keyframes pulse-live {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        /* Live Preview Section */
+        .preview-section {
+            text-align: center;
+            position: relative;
+        }
+
+        .preview-input-group {
+            display: flex;
+            gap: 0;
+            margin: 2rem auto;
+            max-width: 450px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 0.35rem;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .preview-input-group:focus-within {
+            border-color: var(--accent);
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .preview-input-group input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            outline: none;
+        }
+
+        .preview-input-group input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .preview-domain {
+            color: var(--accent);
+            font-weight: 600;
+            padding: 0.75rem 1rem;
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+
+        .preview-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .preview-card {
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 150px;
+            transition: all 0.3s ease;
+        }
+
+        .preview-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .preview-card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .preview-avatar {
+            width: 44px;
+            height: 44px;
+            background: var(--text-primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .preview-card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .preview-card-domain {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        .preview-card-footer {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .preview-card-footer:hover {
+            color: var(--accent);
+        }
+
+        .preview-card-footer .icon {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Pricing Section */
+        /* Monthly Services - Main Focus */
+        .monthly-services {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .monthly-services {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .monthly-card {
+            padding: 1.75rem;
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .monthly-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 30px var(--accent-glow);
+        }
+
+        .monthly-card-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .monthly-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .monthly-icon .icon {
+            width: 24px;
+            height: 24px;
+            color: var(--accent);
+        }
+
+        .monthly-content h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .monthly-content p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+        }
+
+        .monthly-content .monthly-price {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-top: 0.75rem;
+        }
+
+        .monthly-content .monthly-price span {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .monthly-features {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .monthly-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            padding: 0.25rem 0.6rem;
+            background: var(--bg);
+            border-radius: 4px;
+            border: 1px solid var(--border);
+        }
+
+        .monthly-features li .icon {
+            width: 14px;
+            height: 14px;
+            color: var(--accent);
+        }
+
+        /* Pricing Grid - Smaller Cards */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-card {
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--accent);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--accent);
+        }
+
+        .pricing-tier-badge {
+            display: inline-block;
+            padding: 0.25rem 0.65rem;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .pricing-tier-badge.basic {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .pricing-tier-badge.standard {
+            color: var(--accent);
+            border-color: var(--accent);
+            background: rgba(0, 212, 255, 0.1);
+        }
+
+        .pricing-tier-badge.premium {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--text-primary);
+            color: var(--bg);
+            padding: 0.35rem 1rem;
+            border-radius: 0 0 8px 8px;
+            font-weight: 700;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .pricing-header {
+            margin-bottom: 1rem;
+        }
+
+        .pricing-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 0.35rem;
+        }
+
+        .pricing-description {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin-bottom: 0.75rem;
+        }
+
+        .pricing-price {
+            display: flex;
+            align-items: baseline;
+            gap: 0.25rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .pricing-price .currency {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .pricing-price .amount {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        .pricing-price .range {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .pricing-period {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
+        }
+
+        .pricing-features li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-features li .check {
+            color: var(--accent);
+            font-weight: 700;
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+
+        .pricing-cta .button {
+            width: 100%;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .pricing-note {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 2rem;
+            padding: 1.25rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+        }
+
+        .pricing-note p {
+            margin: 0.35rem 0;
+        }
+
+        .pricing-note strong {
+            color: var(--text-primary);
+        }
+
+        /* Why Choose Us */
+        .why-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .why-item:hover {
+            background: var(--bg);
+        }
+
+        .why-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .why-icon .icon {
+            width: 22px;
+            height: 22px;
+            color: var(--accent);
+        }
+
+        .why-content h3 {
+            font-weight: 700;
+            margin-bottom: 0.35rem;
+            font-size: 1rem;
+        }
+
+        .why-content p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        /* Use Cases */
+        .usecases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .usecase-card {
+            padding: 1.5rem;
+            text-align: center;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .usecase-card:hover {
+            border-color: var(--accent);
+        }
+
+        .usecase-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 1rem;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .usecase-icon .icon {
+            width: 24px;
+            height: 24px;
+            color: var(--accent);
+        }
+
+        .usecase-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .usecase-card p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        /* Founder Section */
+        .founder-section {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .founder-image {
+            width: 200px;
+            height: 200px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            font-size: 3rem;
+            font-weight: 800;
+        }
+
+        .founder-content h2 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .founder-role {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .founder-content p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .founder-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .founder-link:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .founder-link .icon {
+            width: 16px;
+            height: 16px;
+            transition: transform 0.3s ease;
+        }
+
+        .founder-link:hover .icon {
+            transform: translateX(3px);
+        }
+
+        /* Store Section */
+        .store-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .store-section h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+        }
+
+        .store-section p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 0.75rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: var(--text-secondary);
+        }
+
+        .faq-item.active {
+            border-color: var(--accent);
+        }
+
+        .faq-question {
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 0.95rem;
+            user-select: none;
+            transition: all 0.3s ease;
+        }
+
+        .faq-toggle {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+            color: var(--accent);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            padding: 0 1.25rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.9rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 0 1.25rem 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border);
+            padding: 3rem 0 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-wrapper {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-visual {
+                height: 400px;
+                margin-top: 2rem;
+            }
+
+            .hero-card:nth-child(1) {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .hero-card:nth-child(2),
+            .hero-card:nth-child(3) {
+                display: none;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+
+            .trust-badges {
+                justify-content: center;
+            }
+
+            .founder-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 3rem;
+            }
+
+            .founder-image {
+                margin: 0 auto;
+                width: 250px;
+                height: 250px;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .pricing-card.featured:hover {
+                transform: translateY(-10px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--card-dark);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            }
+
+            body.light-mode .nav-links {
+                background: var(--card-light);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .hero {
+                margin-top: 80px;
+                min-height: auto;
+                padding: 3rem 0;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .hero-visual {
+                height: 300px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            section {
+                padding: 4rem 0;
+            }
+
+            .container {
+                padding: 0 1.25rem;
+            }
+
+            .preview-input-group {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .preview-domain {
+                width: 100%;
+                text-align: center;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .monthly-services {
+                grid-template-columns: 1fr;
+            }
+
+            .why-section {
+                padding: 3rem 1.5rem;
+                border-radius: 20px;
+            }
+
+            .why-item:hover {
+                transform: translateX(0);
+            }
+
+            .store-section {
+                padding: 3rem 1.5rem;
+                border-radius: 20px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .trust-badges {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .trust-badge-item {
+                justify-content: center;
+            }
+        }
+
+        /* Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-60px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal-scale.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Stagger children animation */
+        .stagger-children > * {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .stagger-children.active > *:nth-child(1) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(2) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(3) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(4) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(5) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
+        .stagger-children.active > *:nth-child(6) { transition-delay: 0.6s; opacity: 1; transform: translateY(0); }
+
+        /* Cursor glow effect */
+        .cursor-glow {
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        body:hover .cursor-glow {
+            opacity: 1;
+        }
+
+        /* Text gradient animation */
+        .animated-gradient {
+            background: linear-gradient(90deg, var(--text-primary), var(--accent), var(--silver), var(--text-primary));
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientFlow 4s ease infinite;
+        }
+
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Number counter animation */
+        .counter {
+            display: inline-block;
+        }
+
+        /* Typing effect */
+        .typewriter {
+            overflow: hidden;
+            border-right: 3px solid var(--accent);
+            white-space: nowrap;
+            animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* Loading animation */
+        .loading-dots span {
+            animation: loadingDots 1.4s infinite ease-in-out both;
+        }
+
+        .loading-dots span:nth-child(1) { animation-delay: -0.32s; }
+        .loading-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes loadingDots {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+
+        /* Smooth scroll indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        .scroll-indicator::after {
+            content: '';
+            width: 24px;
+            height: 40px;
+            border: 2px solid currentColor;
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .scroll-indicator::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 2px;
+            animation: scrollDown 2s infinite;
+        }
+
+        @keyframes scrollDown {
+            0% { opacity: 1; transform: translateX(-50%) translateY(-20px); }
+            100% { opacity: 0; transform: translateX(-50%) translateY(0); }
         }
     </style>
-</head>
-<body class="text-slate-800 antialiased flex flex-col min-h-screen relative overflow-x-hidden selection:bg-brand-200">
 
-    <!-- Interactive Background -->
-    <div class="bg-canvas" id="parallax-bg">
-        <div class="blob blob-1" data-speed="2"></div>
-        <div class="blob blob-2" data-speed="-2"></div>
-        <div class="blob blob-3" data-speed="1"></div>
-        <div class="grid-overlay"></div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white/60 backdrop-blur-xl border-b border-white/20 transition-all duration-300 top-0">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex-shrink-0 cursor-pointer group" onclick="navigateTo('home')">
-                    <span class="text-2xl font-extrabold tracking-tight text-slate-900 group-hover:text-brand-600 transition-colors">Sub<span class="text-brand-600 group-hover:text-slate-900">Dm</span>.</span>
-                </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8 items-center">
-                    <button onclick="navigateTo('home')" class="text-slate-600 hover:text-brand-600 font-medium transition-colors text-sm uppercase tracking-wide">Home</button>
-                    <a href="https://store.subdm.site" target="_blank" class="text-slate-600 hover:text-brand-600 font-medium transition-colors text-sm uppercase tracking-wide flex items-center gap-1">Shop <i data-lucide="external-link" class="w-3 h-3"></i></a>
-                    <button onclick="navigateTo('about')" class="text-slate-600 hover:text-brand-600 font-medium transition-colors text-sm uppercase tracking-wide">About</button>
-                    <button onclick="navigateTo('home', 'pricing')" class="px-6 py-2 rounded-full bg-slate-900 text-white font-medium hover:bg-brand-600 transition-all shadow-lg hover:shadow-brand-500/30 transform hover:-translate-y-0.5 text-sm">Get Started</button>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-slate-900 p-2">
-                        <i data-lucide="menu" class="h-6 w-6"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Menu Panel -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white/95 border-t border-slate-100 absolute w-full backdrop-blur-xl">
-            <div class="px-4 pt-4 pb-6 space-y-3 shadow-2xl">
-                <button onclick="navigateTo('home'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 font-semibold text-slate-700 bg-slate-50 rounded-xl">Home</button>
-                <a href="https://store.subdm.site" target="_blank" class="block w-full text-left px-4 py-3 font-semibold text-slate-700 hover:bg-slate-50 rounded-xl flex justify-between items-center">Shop <i data-lucide="external-link" class="w-4 h-4"></i></a>
-                <button onclick="navigateTo('about'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 font-semibold text-slate-700 hover:bg-slate-50 rounded-xl">About</button>
-                <button onclick="navigateTo('home', 'pricing'); toggleMobileMenu()" class="block w-full text-left px-4 py-3 font-bold text-white bg-brand-600 rounded-xl shadow-lg">Check Pricing</button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content Area -->
-    <main class="flex-grow pt-16 z-10 relative">
-        
-        <!-- ==================== HOME PAGE VIEW ==================== -->
-        <div id="home-view" class="page-view">
-            
-            <!-- Hero Section (Psychology: Simplicity + Value) -->
-            <section class="pt-24 pb-20 lg:pt-36 lg:pb-32 px-4 relative">
-                <div class="max-w-5xl mx-auto text-center">
-                    
-                    <!-- Social Proof / Urgency Badge -->
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/50 border border-brand-100 text-slate-600 text-sm font-medium shadow-sm mb-8 slide-up backdrop-blur-md hover:scale-105 transition-transform cursor-default">
-                        <span class="flex h-2 w-2 relative">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                        </span>
-                        Accepting new portfolios for January
-                    </div>
-                    
-                    <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight mb-8 leading-[1.1] slide-up">
-                        Stop Overpaying.<br/>
-                        Start <span id="typewriter" class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-500 typing-cursor">Building.</span>
-                    </h1>
-                    
-                    <p class="mt-6 text-xl text-slate-600 mb-6 leading-relaxed slide-up max-w-2xl mx-auto font-light">
-                        Agencies charge ₹5000+ for simple sites. 
-                        <br class="hidden md:block">
-                        We give you a professional subdomain portfolio for <strong>a fraction of the cost.</strong>
-                    </p>
-
-                    <!-- Trust Guarantee Banner -->
-                    <div class="mb-10 inline-block p-[2px] rounded-2xl bg-gradient-to-r from-green-400 to-brand-500 slide-up shadow-lg hover:scale-105 transition-transform duration-300">
-                        <div class="bg-white/95 backdrop-blur-md px-6 py-3 rounded-[14px]">
-                            <p class="text-slate-900 font-bold flex items-center gap-2 text-sm md:text-base">
-                                <i data-lucide="shield-check" class="text-green-500 w-6 h-6"></i>
-                                Pay after your site is live and working and you're satisfied
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col sm:flex-row justify-center gap-5 slide-up">
-                        <button onclick="scrollToSection('pricing')" class="group relative px-8 py-4 rounded-xl bg-slate-900 text-white font-bold text-lg hover:bg-brand-600 transition-all shadow-xl hover:shadow-brand-500/40 transform hover:-translate-y-1 overflow-hidden shimmer">
-                            <span class="relative z-10 flex items-center gap-2">
-                                Get Started from ₹349
-                                <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
-                            </span>
-                        </button>
-                        <button onclick="scrollToSection('comparison')" class="px-8 py-4 rounded-xl bg-white/50 text-slate-700 border border-slate-200 font-semibold hover:bg-white transition-all hover:border-slate-300 backdrop-blur-sm">
-                            Why Choose Us?
-                        </button>
-                    </div>
-
-                    <!-- Trust Signals -->
-                    <div class="mt-16 pt-8 border-t border-slate-200/60 max-w-3xl mx-auto slide-up">
-                        <p class="text-sm text-slate-400 uppercase tracking-widest font-semibold mb-6">Built for simplicity</p>
-                        <div class="flex justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                            <div class="flex flex-col items-center gap-2">
-                                <div class="p-3 bg-white rounded-lg shadow-sm"><i data-lucide="code-2" class="w-6 h-6 text-brand-500"></i></div>
-                                <span class="text-xs font-medium">Clean Code</span>
-                            </div>
-                            <div class="flex flex-col items-center gap-2">
-                                <div class="p-3 bg-white rounded-lg shadow-sm"><i data-lucide="zap" class="w-6 h-6 text-amber-500"></i></div>
-                                <span class="text-xs font-medium">Fast Load</span>
-                            </div>
-                            <div class="flex flex-col items-center gap-2">
-                                <div class="p-3 bg-white rounded-lg shadow-sm"><i data-lucide="user-check" class="w-6 h-6 text-green-500"></i></div>
-                                <span class="text-xs font-medium">Freelancer Managed</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Comparison Section (Psychology: Value Anchoring) -->
-            <section class="py-20" id="comparison">
-                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="text-center mb-12 slide-up">
-                        <h2 class="text-3xl font-bold text-slate-900">Why Students & Freelancers Choose SubDm</h2>
-                        <p class="text-slate-500 mt-2">See the difference yourself.</p>
-                    </div>
-
-                    <div class="glass-card rounded-2xl overflow-hidden shadow-xl slide-up">
-                        <div class="grid grid-cols-3 bg-slate-50/50 border-b border-slate-200 font-bold text-sm md:text-base text-slate-900">
-                            <div class="p-5">Feature</div>
-                            <div class="p-5 text-center text-slate-400">Typical Agency</div>
-                            <div class="p-5 text-center bg-brand-50/50 text-brand-700">SubDm</div>
-                        </div>
-                        
-                        <!-- Row 1 -->
-                        <div class="grid grid-cols-3 border-b border-slate-100 hover:bg-white/50 transition-colors">
-                            <div class="p-5 font-medium text-slate-700 flex items-center gap-2">
-                                <i data-lucide="indian-rupee" class="w-4 h-4 text-slate-400"></i> Cost
-                            </div>
-                            <div class="p-5 text-center text-red-500 font-medium">₹5,000+</div>
-                            <div class="p-5 text-center text-green-600 font-bold bg-brand-50/20">₹499 / year</div>
-                        </div>
-
-                        <!-- Row 2 -->
-                        <div class="grid grid-cols-3 border-b border-slate-100 hover:bg-white/50 transition-colors">
-                            <div class="p-5 font-medium text-slate-700 flex items-center gap-2">
-                                <i data-lucide="clock" class="w-4 h-4 text-slate-400"></i> Delivery Time
-                            </div>
-                            <div class="p-5 text-center text-slate-500">7-14 Days</div>
-                            <div class="p-5 text-center text-slate-900 font-medium bg-brand-50/20">~24 Hours</div>
-                        </div>
-
-                        <!-- Row 3 -->
-                        <div class="grid grid-cols-3 border-b border-slate-100 hover:bg-white/50 transition-colors">
-                            <div class="p-5 font-medium text-slate-700 flex items-center gap-2">
-                                <i data-lucide="server" class="w-4 h-4 text-slate-400"></i> Tech Headache
-                            </div>
-                            <div class="p-5 text-center text-slate-500">High (Manage hosting)</div>
-                            <div class="p-5 text-center text-green-600 font-medium bg-brand-50/20">Zero. We handle everything.</div>
-                        </div>
-
-                         <!-- Row 4 -->
-                         <div class="grid grid-cols-3 hover:bg-white/50 transition-colors">
-                            <div class="p-5 font-medium text-slate-700 flex items-center gap-2">
-                                <i data-lucide="lock" class="w-4 h-4 text-slate-400"></i> Complexity
-                            </div>
-                            <div class="p-5 text-center text-slate-500">Overkill</div>
-                            <div class="p-5 text-center text-brand-600 font-medium bg-brand-50/20">Perfectly Simple</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Pricing Section -->
-            <section class="py-20 relative" id="pricing">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div class="text-center mb-16 slide-up">
-                        <h2 class="text-4xl font-extrabold text-slate-900 mb-4">Select Your Package</h2>
-                        <p class="text-lg text-slate-600">Transparent pricing. Simple services.</p>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-                        
-                        <!-- Card 1: Custom Website (POPULAR) -->
-                        <div class="bg-white/90 backdrop-blur-xl border-2 border-brand-500 rounded-2xl p-6 flex flex-col shadow-[0_0_30px_rgba(59,130,246,0.15)] relative group cursor-pointer slide-up tilt-card" style="animation-delay: 0.1s;">
-                            <div class="absolute top-0 right-6 bg-gradient-to-r from-brand-500 to-indigo-500 text-white text-[10px] font-bold px-3 py-1 rounded-b-lg flex items-center gap-1 shadow-md">
-                                ⭐ POPULAR
-                            </div>
-                            
-                            <div class="mb-5 border-b border-slate-100 pb-5 mt-2">
-                                <h3 class="text-slate-900 font-extrabold text-xl mb-1 group-hover:text-brand-600 transition-colors">Custom Website</h3>
-                                <p class="text-slate-500 text-xs font-medium h-8">Showcase your creative work</p>
-                                <div class="text-brand-600 font-black text-3xl tracking-tight mt-3">
-                                    <span class="text-xs text-slate-400 font-semibold block -mb-1 uppercase tracking-wider">starting from</span>
-                                    ₹499
-                                </div>
-                            </div>
-                            
-                            <ul class="space-y-3 mb-6 flex-grow">
-                                <li class="flex items-start gap-2 text-slate-700 text-sm font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i> Personal portfolio</li>
-                                <li class="flex items-start gap-2 text-slate-700 text-sm font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i> Personal resume</li>
-                                <li class="flex items-start gap-2 text-slate-700 text-sm font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i> Mobile responsive</li>
-                                <li class="flex items-start gap-2 text-slate-700 text-sm font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i> Fast loading</li>
-                            </ul>
-                            
-                            <div class="mt-auto w-full">
-                                <div class="bg-brand-50 text-brand-700 text-xs font-bold px-3 py-2.5 rounded-lg text-center border border-brand-200 shadow-sm mb-3">
-                                    Special for Personal use
-                                </div>
-                                <a href="https://wa.me/8562094396749" target="_blank" class="w-full flex justify-center items-center gap-2 py-3 rounded-xl bg-brand-600 text-white font-bold hover:bg-brand-700 transition-all shadow-md transform hover:-translate-y-1">
-                                    <i data-lucide="message-circle" class="w-4 h-4"></i> Contact on WhatsApp
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Card 2: Business Landing Page -->
-                        <div class="bg-white/60 backdrop-blur-md border border-slate-200 rounded-2xl p-6 flex flex-col shadow-lg hover:border-brand-400 hover:shadow-xl transition-all duration-300 slide-up group cursor-pointer tilt-card" style="animation-delay: 0.2s;">
-                            <div class="mb-5 border-b border-slate-100 pb-5 mt-2">
-                                <h3 class="text-slate-900 font-extrabold text-xl mb-1 group-hover:text-brand-600 transition-colors">Business Landing Page</h3>
-                                <p class="text-slate-500 text-xs font-medium h-8">Convert visitors to clients</p>
-                                <div class="text-slate-900 font-black text-3xl tracking-tight mt-3">
-                                    <span class="text-xs text-transparent font-semibold block -mb-1 uppercase tracking-wider select-none">price</span>
-                                    ₹599<span class="text-xl text-brand-600">+</span>
-                                </div>
-                            </div>
-                            
-                            <ul class="space-y-3 mb-6 flex-grow">
-                                <li class="flex items-start gap-2 text-slate-700 text-sm font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i> Business landing page</li>
-                                <li class="flex items-start gap-2 text-slate-700 text-sm font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i> Contact / WhatsApp integration</li>
-                                <li class="flex items-start gap-2 text-slate-700 text-sm font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i> Mobile optimized</li>
-                            </ul>
-                            
-                            <div class="mt-auto w-full">
-                                <div class="bg-slate-100 text-slate-700 text-xs font-bold px-3 py-2.5 rounded-lg text-center border border-slate-200 mb-3">
-                                    Best for new or small Business
-                                </div>
-                                <a href="https://wa.me/8562094396749" target="_blank" class="w-full flex justify-center items-center gap-2 py-3 rounded-xl bg-slate-900 text-white font-bold hover:bg-slate-800 transition-all shadow-md transform hover:-translate-y-1">
-                                    <i data-lucide="message-circle" class="w-4 h-4"></i> Contact on WhatsApp
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Card 3: 6 Month Subdomain -->
-                        <div class="bg-white/60 backdrop-blur-md border border-slate-200 rounded-2xl p-6 flex flex-col shadow-lg hover:border-brand-400 hover:shadow-xl transition-all duration-300 slide-up group cursor-pointer tilt-card" style="animation-delay: 0.3s;">
-                            <div class="mb-5 border-b border-slate-100 pb-5 mt-2">
-                                <h3 class="text-slate-900 font-extrabold text-xl mb-1 group-hover:text-brand-600 transition-colors">6 Month Subdomain</h3>
-                                <p class="text-slate-500 text-xs font-medium h-8">yourname.subdm.site</p>
-                                <div class="text-slate-900 font-black text-3xl tracking-tight mt-3">
-                                    <span class="text-xs text-transparent font-semibold block -mb-1 uppercase tracking-wider select-none">price</span>
-                                    ₹349
-                                </div>
-                            </div>
-                            
-                            <ul class="space-y-3 mb-6 flex-grow">
-                                <li class="flex items-start gap-2 text-slate-700 text-sm font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i> Subdomain of choice</li>
-                                <li class="flex items-start gap-2 text-slate-700 text-sm font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i> Hosting connection support</li>
-                                <li class="flex items-start gap-2 text-slate-700 text-sm font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i> Basic setup</li>
-                            </ul>
-                            
-                            <div class="mt-auto w-full">
-                                <a href="https://wa.me/8562094396749" target="_blank" class="w-full flex justify-center items-center gap-2 py-3 rounded-xl bg-slate-900 text-white font-bold hover:bg-slate-800 transition-all shadow-md transform hover:-translate-y-1">
-                                    <i data-lucide="message-circle" class="w-4 h-4"></i> Contact on WhatsApp
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Card 4: Student Subdomain -->
-                        <div class="bg-white/60 backdrop-blur-md border border-slate-200 rounded-2xl p-6 flex flex-col shadow-lg hover:border-brand-400 hover:shadow-xl transition-all duration-300 slide-up group cursor-pointer tilt-card" style="animation-delay: 0.4s;">
-                            <div class="mb-5 border-b border-slate-100 pb-5 mt-2">
-                                <h3 class="text-slate-900 font-extrabold text-xl mb-1 group-hover:text-brand-600 transition-colors">Student Subdomain</h3>
-                                <p class="text-slate-500 text-xs font-medium h-8">yourname.subdm.site</p>
-                                <div class="text-slate-900 font-black text-3xl tracking-tight mt-3 flex items-baseline gap-1">
-                                    <div class="flex flex-col">
-                                        <span class="text-xs text-transparent font-semibold block -mb-1 uppercase tracking-wider select-none">price</span>
-                                        ₹499<span class="text-sm text-slate-500 font-medium">/yr</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <ul class="space-y-3 mb-6 flex-grow">
-                                <li class="flex items-start gap-2 text-amber-800 text-xs font-bold bg-amber-50 p-2.5 rounded-lg border border-amber-200 mb-3 shadow-sm">
-                                    <i data-lucide="alert-circle" class="w-4 h-4 text-amber-500 flex-shrink-0"></i> Need verification to confirm student discount
-                                </li>
-                                <li class="flex items-start gap-2 text-slate-700 text-sm font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i> Subdomain of choice</li>
-                                <li class="flex items-start gap-2 text-slate-700 text-sm font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i> Hosting connection support</li>
-                                <li class="flex items-start gap-2 text-slate-700 text-sm font-medium"><i data-lucide="check" class="w-4 h-4 text-brand-500 mt-0.5 flex-shrink-0"></i> Basic setup</li>
-                            </ul>
-                            
-                            <div class="mt-auto w-full">
-                                <a href="https://wa.me/8562094396749" target="_blank" class="w-full flex justify-center items-center gap-2 py-3 rounded-xl bg-slate-900 text-white font-bold hover:bg-slate-800 transition-all shadow-md transform hover:-translate-y-1">
-                                    <i data-lucide="message-circle" class="w-4 h-4"></i> Contact on WhatsApp
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-             <!-- Service Details Grid -->
-             <section class="py-20 bg-white/40 backdrop-blur-sm" id="features">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        
-                        <!-- Box 1 -->
-                        <div class="p-8 rounded-2xl bg-white border border-slate-100 hover:border-blue-200 transition-all hover:-translate-y-1 shadow-sm slide-up">
-                            <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-brand-600 mb-4">
-                                <i data-lucide="globe"></i>
-                            </div>
-                            <h4 class="font-bold text-slate-900 mb-2">We Provide</h4>
-                            <p class="text-sm text-slate-600">A clean .subdm.site address and a coded HTML/CSS page ready to show the world.</p>
-                        </div>
-
-                        <!-- Box 2 -->
-                        <div class="p-8 rounded-2xl bg-amber-50/50 border border-amber-100 hover:border-amber-200 transition-all hover:-translate-y-1 shadow-sm slide-up">
-                            <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center text-amber-600 mb-4">
-                                <i data-lucide="hand-metal"></i>
-                            </div>
-                            <h4 class="font-bold text-slate-900 mb-2">We Manage</h4>
-                            <p class="text-sm text-slate-600">We can provide 3rd party Hosting. We can also help you buy a full .com domain at a discount if you need one later.</p>
-                        </div>
-
-                        <!-- Box 3 -->
-                        <div class="p-8 rounded-2xl bg-white border border-slate-100 hover:border-red-200 transition-all hover:-translate-y-1 shadow-sm slide-up">
-                            <div class="w-10 h-10 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600 mb-4">
-                                <i data-lucide="shield-alert"></i>
-                            </div>
-                            <h4 class="font-bold text-slate-900 mb-2">We Don't Do</h4>
-                            <p class="text-sm text-slate-600">No databases, no login systems, no complex apps. We keep it static and fast.</p>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <!-- Shop CTA Section -->
-            <section class="py-20 relative" id="shop">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div class="glass-card rounded-3xl p-10 md:p-16 text-center shadow-xl border border-brand-100 slide-up relative overflow-hidden">
-                        <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-500/20 rounded-full blur-3xl"></div>
-                        <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl"></div>
-                        
-                        <span class="bg-white text-brand-700 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-6 inline-block shadow-sm border border-brand-100">SubDm Store</span>
-                        <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">Looking for Premium Templates?</h2>
-                        <p class="text-lg text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-                            Skip the wait. Explore our dedicated shop for high-converting Business Landing Pages, stunning Personal Portfolios, and Professional Resumes. Ready to deploy!
-                        </p>
-                        <a href="https://store.subdm.site" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-brand-600 text-white font-bold text-lg hover:bg-brand-700 transition-all shadow-xl hover:shadow-brand-500/40 transform hover:-translate-y-1 shimmer overflow-hidden">
-                            <span class="relative z-10 flex items-center gap-2">
-                                Visit store.subdm.site
-                                <i data-lucide="shopping-bag" class="w-5 h-5"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- ==================== ABOUT PAGE VIEW ==================== -->
-        <div id="about-view" class="page-view hidden">
-            <section class="py-24 px-4">
-                <div class="max-w-3xl mx-auto">
-                    <h1 class="text-4xl font-extrabold text-slate-900 mb-8 text-center">Transparent & Simple.</h1>
-                    
-                    <div class="glass-card p-10 rounded-3xl text-lg text-slate-600 leading-relaxed space-y-6">
-                        <p>
-                            <strong>The Problem:</strong> Most students want a portfolio but get stuck buying expensive hosting, configuring DNS, and learning WordPress.
-                        </p>
-                        <p>
-                            <strong>The Solution:</strong> SubDm cuts the fat. You pay a small yearly fee. We give you the address and the page. Done.
-                        </p>
-                        
-                        <div class="bg-blue-50/50 p-6 rounded-2xl border border-blue-100 my-6 flex gap-4 items-start">
-                            <i data-lucide="user" class="w-6 h-6 text-brand-600 mt-1"></i>
-                            <div>
-                                <h3 class="font-bold text-slate-900">Who runs this?</h3>
-                                <p class="text-sm mt-1">
-                                    We are a small team of freelance developers. When you email us, a human replies. We believe in "less is more."
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Policies Add-on -->
-                        <div class="mt-10 pt-10 border-t border-slate-200">
-                            <h2 class="text-2xl font-bold text-slate-900 mb-6">Our Policies & Commitment</h2>
-                            <div class="grid md:grid-cols-2 gap-6">
-                                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-                                    <div class="flex items-center gap-3 mb-3">
-                                        <div class="p-2 bg-green-50 rounded-lg text-green-600">
-                                            <i data-lucide="refresh-ccw" class="w-5 h-5"></i>
-                                        </div>
-                                        <h3 class="font-bold text-slate-900">7-Day Return Policy</h3>
-                                    </div>
-                                    <p class="text-sm text-slate-600">Your satisfaction is our priority. If you are not happy with our service, you can request a full or partial refund within 7 days of your purchase.</p>
-                                </div>
-                                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
-                                    <div class="flex items-center gap-3 mb-3">
-                                        <div class="p-2 bg-brand-50 rounded-lg text-brand-600">
-                                            <i data-lucide="scale" class="w-5 h-5"></i>
-                                        </div>
-                                        <h3 class="font-bold text-slate-900">Indian Jurisdiction</h3>
-                                    </div>
-                                    <p class="text-sm text-slate-600">SubDm operates as a legitimate freelancer-managed service. All our policies and agreements are governed under Indian Law, ensuring legal clarity.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-        </div>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-white/40 backdrop-blur-md border-t border-slate-200 py-12 mt-auto z-10 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="text-center md:text-left">
-                <span class="text-xl font-black text-slate-900">Sub<span class="text-brand-600">Dm</span>.</span>
-                <p class="text-sm text-slate-500 mt-1">Made for builders.</p>
-            </div>
-            
-            <div class="flex gap-8 text-sm font-bold text-slate-600">
-                <button onclick="navigateTo('home')" class="hover:text-brand-600 transition-colors">Home</button>
-                <button onclick="navigateTo('about')" class="hover:text-brand-600 transition-colors">About</button>
-                <button onclick="navigateTo('terms')" class="hover:text-brand-600 transition-colors">Terms</button>
-            </div>
-
-            <div class="text-sm text-slate-400 font-medium">
-                &copy; 2026 SubDm. By Manish
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
     <script>
-        // Initialize Icons
-        lucide.createIcons();
-
-        // --- Typing Animation Logic ---
-        const textToType = ["Building.", "Creating.", "Freelancing.", "Saving."];
-        let typeIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        
-        function typeEffect() {
-            const currentWord = textToType[typeIndex];
-            const typeElement = document.getElementById('typewriter');
+        // Initialize on DOM load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme Toggle
+            const themeToggle = document.querySelector('.theme-toggle');
+            const savedTheme = localStorage.getItem('theme-mode');
             
-            if(!typeElement) return;
-
-            if (isDeleting) {
-                typeElement.textContent = currentWord.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typeElement.textContent = currentWord.substring(0, charIndex + 1);
-                charIndex++;
+            // Default to dark mode
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-mode');
             }
 
-            let typeSpeed = isDeleting ? 100 : 150;
+            themeToggle?.addEventListener('click', () => {
+                document.body.classList.toggle('light-mode');
+                const isLightMode = document.body.classList.contains('light-mode');
+                localStorage.setItem('theme-mode', isLightMode ? 'light' : 'dark');
+            });
 
-            if (!isDeleting && charIndex === currentWord.length) {
-                typeSpeed = 2000; // Pause at end
-                isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                typeIndex = (typeIndex + 1) % textToType.length;
-                typeSpeed = 500;
+            // Mobile menu toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            
+            mobileMenuBtn?.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                mobileMenuBtn.classList.toggle('active');
+            });
+
+            // Header scroll effect
+            const header = document.querySelector('header');
+            let lastScroll = 0;
+            
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.scrollY;
+                
+                if (currentScroll > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                lastScroll = currentScroll;
+            });
+
+            // Scroll reveal animations
+            const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .stagger-children');
+            
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // Live Preview
+            const previewInput = document.querySelector('.preview-input-name');
+            const previewCards = document.querySelectorAll('.preview-card');
+
+            if (previewInput) {
+                previewInput.addEventListener('input', (e) => {
+                    const name = e.target.value || 'yourname';
+                    previewCards.forEach(card => {
+                        const cardName = card.querySelector('.preview-card-title');
+                        const cardDomain = card.querySelector('.preview-card-domain');
+                        const avatar = card.querySelector('.preview-avatar');
+
+                        if (cardName) cardName.textContent = name;
+                        if (cardDomain) cardDomain.textContent = name.toLowerCase().replace(/\s/g, '') + '.subdm.site';
+                        if (avatar) avatar.textContent = name.charAt(0).toUpperCase();
+                    });
+                });
             }
 
-            setTimeout(typeEffect, typeSpeed);
-        }
+            // FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question?.addEventListener('click', () => {
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    item.classList.toggle('active');
+                });
+            });
 
-        // --- 3D Tilt Effect ---
-        function initTilt() {
-            const cards = document.querySelectorAll('.tilt-card');
-            
-            cards.forEach(card => {
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                        // Close mobile menu if open
+                        navLinks?.classList.remove('active');
+                    }
+                });
+            });
+
+            // Cursor glow effect (desktop only)
+            if (window.innerWidth > 768) {
+                const cursorGlow = document.createElement('div');
+                cursorGlow.className = 'cursor-glow';
+                document.body.appendChild(cursorGlow);
+
+                let mouseX = 0, mouseY = 0;
+                let currentX = 0, currentY = 0;
+
+                document.addEventListener('mousemove', (e) => {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                });
+
+                function animateCursor() {
+                    currentX += (mouseX - currentX) * 0.1;
+                    currentY += (mouseY - currentY) * 0.1;
+                    cursorGlow.style.left = currentX + 'px';
+                    cursorGlow.style.top = currentY + 'px';
+                    requestAnimationFrame(animateCursor);
+                }
+                animateCursor();
+            }
+
+            // Meteor Streak Canvas Animation
+            const canvas = document.getElementById('particles-canvas');
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+                let meteors = [];
+                
+                function resizeCanvas() {
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+                }
+                resizeCanvas();
+                window.addEventListener('resize', resizeCanvas);
+
+                class Meteor {
+                    constructor() {
+                        this.reset();
+                    }
+
+                    reset() {
+                        // Start from top-right area, move to bottom-left
+                        this.x = Math.random() * canvas.width * 1.5;
+                        this.y = -100 - Math.random() * 200;
+                        
+                        // Length of the meteor trail
+                        this.length = Math.random() * 150 + 80;
+                        this.width = Math.random() * 2.5 + 0.5;
+                        
+                        // Speed - diagonal movement (slower, more elegant)
+                        this.speed = Math.random() * 1.5 + 0.5;
+                        
+                        // Angle (roughly 30-45 degrees)
+                        this.angle = Math.PI / 4 + (Math.random() - 0.5) * 0.3;
+                        
+                        // Color variation (cyan to blue to purple)
+                        const colorChoice = Math.random();
+                        if (colorChoice < 0.5) {
+                            this.color = { r: 0, g: 212, b: 255 }; // Cyan
+                        } else if (colorChoice < 0.8) {
+                            this.color = { r: 50, g: 150, b: 255 }; // Blue
+                        } else {
+                            this.color = { r: 100, g: 100, b: 255 }; // Purple-blue
+                        }
+                        
+                        this.opacity = Math.random() * 0.6 + 0.4;
+                        this.active = true;
+                        
+                        // Glow intensity
+                        this.glowSize = Math.random() * 15 + 5;
+                    }
+
+                    update() {
+                        this.x -= Math.cos(this.angle) * this.speed;
+                        this.y += Math.sin(this.angle) * this.speed;
+
+                        // Reset when off screen
+                        if (this.y > canvas.height + 100 || this.x < -200) {
+                            this.reset();
+                        }
+                    }
+
+                    draw() {
+                        const tailX = this.x + Math.cos(this.angle) * this.length;
+                        const tailY = this.y - Math.sin(this.angle) * this.length;
+                        
+                        // Glow effect
+                        ctx.save();
+                        ctx.shadowBlur = this.glowSize;
+                        ctx.shadowColor = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${this.opacity})`;
+                        
+                        // Main streak gradient
+                        const gradient = ctx.createLinearGradient(this.x, this.y, tailX, tailY);
+                        gradient.addColorStop(0, `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${this.opacity})`);
+                        gradient.addColorStop(0.3, `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, ${this.opacity * 0.6})`);
+                        gradient.addColorStop(1, `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, 0)`);
+                        
+                        ctx.beginPath();
+                        ctx.strokeStyle = gradient;
+                        ctx.lineWidth = this.width;
+                        ctx.lineCap = 'round';
+                        ctx.moveTo(this.x, this.y);
+                        ctx.lineTo(tailX, tailY);
+                        ctx.stroke();
+                        
+                        // Bright head
+                        ctx.beginPath();
+                        ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+                        ctx.shadowBlur = this.glowSize * 2;
+                        ctx.shadowColor = `rgba(${this.color.r}, ${this.color.g}, ${this.color.b}, 1)`;
+                        ctx.arc(this.x, this.y, this.width * 1.5, 0, Math.PI * 2);
+                        ctx.fill();
+                        
+                        ctx.restore();
+                    }
+                }
+
+                // Create initial meteors
+                const meteorCount = 20;
+                for (let i = 0; i < meteorCount; i++) {
+                    const meteor = new Meteor();
+                    // Stagger initial positions
+                    meteor.y = Math.random() * canvas.height;
+                    meteor.x = Math.random() * canvas.width;
+                    meteors.push(meteor);
+                }
+
+                // Randomly spawn new meteors
+                function maybeSpawnMeteor() {
+                    if (Math.random() < 0.03 && meteors.length < 30) {
+                        meteors.push(new Meteor());
+                    }
+                }
+
+                function animate() {
+                    // Fade effect for trails
+                    ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    
+                    meteors.forEach(meteor => {
+                        meteor.update();
+                        meteor.draw();
+                    });
+
+                    maybeSpawnMeteor();
+                    requestAnimationFrame(animate);
+                }
+                
+                // Initial clear
+                ctx.fillStyle = 'rgba(0, 0, 0, 1)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                animate();
+            }
+
+            // Tilt effect on cards
+            const tiltCards = document.querySelectorAll('.tilt-card, .pricing-card, .preview-card');
+            tiltCards.forEach(card => {
                 card.addEventListener('mousemove', (e) => {
                     const rect = card.getBoundingClientRect();
                     const x = e.clientX - rect.left;
                     const y = e.clientY - rect.top;
-                    
                     const centerX = rect.width / 2;
                     const centerY = rect.height / 2;
-                    
-                    const rotateX = ((y - centerY) / centerY) * -5; // Max 5deg
-                    const rotateY = ((x - centerX) / centerX) * 5;
+                    const rotateX = (y - centerY) / 20;
+                    const rotateY = (centerX - x) / 20;
 
-                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
                 });
 
                 card.addEventListener('mouseleave', () => {
-                    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)';
+                    card.style.transform = '';
                 });
             });
-        }
 
-        // --- Parallax Background ---
-        document.addEventListener('mousemove', (e) => {
-            const blobs = document.querySelectorAll('.blob');
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
+            // Counter animation
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
 
-            blobs.forEach(blob => {
-                const speed = blob.getAttribute('data-speed');
-                const xOffset = (window.innerWidth - e.clientX * speed) / 100;
-                const yOffset = (window.innerHeight - e.clientY * speed) / 100;
-                
-                blob.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+                const updateCounter = () => {
+                    current += step;
+                    if (current < target) {
+                        counter.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    if (entries[0].isIntersecting) {
+                        updateCounter();
+                        observer.disconnect();
+                    }
+                });
+                observer.observe(counter);
             });
-        });
 
-        // --- Router ---
-        function navigateTo(pageId, sectionId = null) {
-            document.querySelectorAll('.page-view').forEach(page => {
-                page.classList.add('hidden');
-                page.classList.remove('fade-in');
+            // Magnetic button effect
+            const magneticBtns = document.querySelectorAll('.button-primary');
+            magneticBtns.forEach(btn => {
+                btn.addEventListener('mousemove', (e) => {
+                    const rect = btn.getBoundingClientRect();
+                    const x = e.clientX - rect.left - rect.width / 2;
+                    const y = e.clientY - rect.top - rect.height / 2;
+                    btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px) translateY(-3px) scale(1.02)`;
+                });
+
+                btn.addEventListener('mouseleave', () => {
+                    btn.style.transform = '';
+                });
             });
-
-            const selectedPage = document.getElementById(`${pageId}-view`);
-            if (selectedPage) {
-                selectedPage.classList.remove('hidden');
-                selectedPage.classList.add('fade-in');
-                
-                if (sectionId) {
-                    setTimeout(() => scrollToSection(sectionId), 100);
-                } else {
-                    window.scrollTo(0, 0);
-                }
-            }
-        }
-
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-
-        function toggleMobileMenu() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        }
-        document.getElementById('mobile-menu-btn').addEventListener('click', toggleMobileMenu);
-
-        // --- Intersection Observer for Animations ---
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.slide-up').forEach(el => observer.observe(el));
-
-        // --- Init ---
-        window.addEventListener('load', () => {
-            navigateTo('home');
-            typeEffect();
-            initTilt();
         });
     </script>
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-gradient"></div>
+    <div class="grid-bg"></div>
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">SubDM</div>
+            <ul class="nav-links">
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#why">Why Us</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><button class="theme-toggle"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        <span>Launch your digital presence</span>
+                    </div>
+                    <h1>
+                        Professional <span class="gradient-text">Subdomain</span> & Hosting Starting at Just
+                        <span class="highlight">₹99/mo</span>
+                    </h1>
+                    <p>Get your own subdomain (yourname.subdm.site) with SSL, DDoS protection, 99.9% uptime, and reliable static hosting. Perfect for portfolios, businesses, and startups.</p>
+
+                    <div class="trust-badges">
+                        <div class="trust-badge-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>No coding required</span>
+                        </div>
+                        <div class="trust-badge-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            <span>Setup in 24-48 hours</span>
+                        </div>
+                        <div class="trust-badge-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            <span>SSL & DDoS Protected</span>
+                        </div>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <a href="#pricing" class="button button-primary">
+                            Get Started
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        <a href="#preview" class="button button-secondary">
+                            View Demo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-card-stack">
+                        <div class="hero-card">
+                            <div class="hero-card-header">
+                                <div class="hero-card-avatar">R</div>
+                                <div>
+                                    <h3>Rahul</h3>
+                                    <div class="hero-card-domain">rahul.subdm.site</div>
+                                </div>
+                            </div>
+                            <div class="hero-card-content">
+                                <div class="hero-card-stat">
+                                    <span>Status</span>
+                                    <span class="status-live">Live</span>
+                                </div>
+                                <div class="hero-card-stat">
+                                    <span>SSL</span>
+                                    <span>Secured</span>
+                                </div>
+                                <div class="hero-card-stat">
+                                    <span>Uptime</span>
+                                    <span>99.9%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-card"></div>
+                        <div class="hero-card"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- Live Preview Section -->
+    <section class="preview-section reveal" id="preview">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Live Preview</span>
+                <h2 class="section-title">Build Your Digital Identity</h2>
+                <p class="section-subtitle">Enter your name and see your professional subdomain website preview instantly</p>
+            </div>
+
+            <div class="preview-input-group">
+                <input type="text" class="preview-input-name" placeholder="yourname" maxlength="20">
+                <span class="preview-domain">.subdm.site</span>
+            </div>
+
+            <div class="preview-cards stagger-children">
+                <div class="preview-card">
+                    <div class="preview-card-header">
+                        <div class="preview-avatar">R</div>
+                        <div>
+                            <div class="preview-card-title">rahul</div>
+                            <div class="preview-card-domain">rahul.subdm.site</div>
+                        </div>
+                    </div>
+                    <a href="#" class="preview-card-footer">Visit Profile <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                </div>
+
+                <div class="preview-card">
+                    <div class="preview-card-header">
+                        <div class="preview-avatar">P</div>
+                        <div>
+                            <div class="preview-card-title">priya</div>
+                            <div class="preview-card-domain">priya.subdm.site</div>
+                        </div>
+                    </div>
+                    <a href="#" class="preview-card-footer">Visit Portfolio <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                </div>
+
+                <div class="preview-card">
+                    <div class="preview-card-header">
+                        <div class="preview-avatar">S</div>
+                        <div>
+                            <div class="preview-card-title">sarah</div>
+                            <div class="preview-card-domain">sarah.subdm.site</div>
+                        </div>
+                    </div>
+                    <a href="#" class="preview-card-footer">Visit Business Page <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Pricing</span>
+                <h2 class="section-title">Simple, Transparent Pricing</h2>
+                <p class="section-subtitle">Choose the perfect plan for your needs. No hidden fees, no surprises.</p>
+            </div>
+
+            <!-- Monthly Services -->
+            <div class="monthly-services stagger-children">
+                <div class="monthly-card">
+                    <div class="monthly-icon">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <div class="monthly-content">
+                        <h3>Monthly Hosting</h3>
+                        <p>Reliable static hosting with 99.9% uptime, DDoS protection, and bot protection included.</p>
+                        <ul class="monthly-features">
+                            <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 99.9% Uptime</li>
+                            <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> DDoS Protection</li>
+                            <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Bot Protection</li>
+                        </ul>
+                        <div class="monthly-price">₹199<span>/mo</span></div>
+                    </div>
+                </div>
+                <div class="monthly-card">
+                    <div class="monthly-icon">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                    </div>
+                    <div class="monthly-content">
+                        <h3>Subdomain</h3>
+                        <p>Get a professional subdomain (yourname.subdm.site) with SSL certificate included.</p>
+                        <ul class="monthly-features">
+                            <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> yourname.subdm.site</li>
+                            <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> SSL Certificate</li>
+                            <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Professional Identity</li>
+                        </ul>
+                        <div class="monthly-price">₹99<span>/mo</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top: 4rem;">
+                <span class="section-badge">Web Design Packs</span>
+                <h2 class="section-title">Complete Website Solutions</h2>
+            </div>
+
+            <div class="pricing-grid stagger-children">
+                <!-- Starter Business -->
+                <div class="pricing-card reveal-scale">
+                    <span class="pricing-tier-badge basic">Starter</span>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Starter Business</h3>
+                        <p class="pricing-description">Perfect for shops, freelancers & small businesses going online.</p>
+                        <div class="pricing-price">
+                            <span class="currency">₹</span>
+                            <span class="amount">789</span>
+                        </div>
+                        <p class="pricing-period">One-time payment</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> 1 landing page</li>
+                        <li><span class="check">✓</span> Business branding & color theme</li>
+                        <li><span class="check">✓</span> WhatsApp / call CTA button</li>
+                        <li><span class="check">✓</span> 14 days free hosting</li>
+                        <li><span class="check">✓</span> Mobile-first responsive design</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <button class="button button-secondary" style="width: 100%;">Get Started</button>
+                    </div>
+                </div>
+
+                <!-- Standard (Featured) -->
+                <div class="pricing-card featured reveal-scale">
+                    <div class="popular-badge">Most Popular</div>
+                    <span class="pricing-tier-badge standard">Standard</span>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Professional</h3>
+                        <p class="pricing-description">For agencies, studios & growing brands that need more.</p>
+                        <div class="pricing-price">
+                            <span class="currency">₹</span>
+                            <span class="amount">1,499</span>
+                        </div>
+                        <p class="pricing-period">One-time payment</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Up to 3 pages</li>
+                        <li><span class="check">✓</span> Services / portfolio section</li>
+                        <li><span class="check">✓</span> Contact form with email alerts</li>
+                        <li><span class="check">✓</span> Google Maps integration</li>
+                        <li><span class="check">✓</span> Basic SEO optimization</li>
+                        <li><span class="check">✓</span> 1 month free hosting + subdomain</li>
+                        <li><span class="check">✓</span> SSL certificate included</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <button class="button button-primary" style="width: 100%;">Get Started</button>
+                    </div>
+                </div>
+
+                <!-- Premium Business -->
+                <div class="pricing-card reveal-scale">
+                    <span class="pricing-tier-badge premium">Premium</span>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Premium Business</h3>
+                        <p class="pricing-description">Full-featured website for businesses with serious digital presence.</p>
+                        <div class="pricing-price">
+                            <span class="currency">₹</span>
+                            <span class="amount">2,999</span>
+                        </div>
+                        <p class="pricing-period">One-time payment</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Up to 5 pages, custom layout</li>
+                        <li><span class="check">✓</span> Advanced UI design & animations</li>
+                        <li><span class="check">✓</span> Blog / news section</li>
+                        <li><span class="check">✓</span> Full SEO setup</li>
+                        <li><span class="check">✓</span> Team or product showcase</li>
+                        <li><span class="check">✓</span> 2 months free hosting + subdomain</li>
+                        <li><span class="check">✓</span> Priority support (2 weeks)</li>
+                    </ul>
+                    <div class="pricing-cta">
+                        <button class="button button-secondary" style="width: 100%;">Get Started</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-note reveal">
+                <p><svg class="icon" style="display:inline-block;vertical-align:middle;width:16px;height:16px;margin-right:6px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg><strong>How it works:</strong></p>
+                <p>Hosting via our platform · Subdomains managed under subdm.site · You own your website data and content</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why" class="reveal">
+        <div class="container">
+            <div class="why-section">
+                <div class="section-header">
+                    <span class="section-badge">Why SubDM</span>
+                    <h2 class="section-title">Why Choose SubDM?</h2>
+                </div>
+                <div class="why-grid stagger-children">
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </div>
+                        <div class="why-content">
+                            <h3>Affordable Pricing</h3>
+                            <p>Starting at just ₹99/month for a subdomain. That's less than a coffee for your digital identity.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        </div>
+                        <div class="why-content">
+                            <h3>Fully Managed Setup</h3>
+                            <p>We handle everything. You just provide your details and design preferences.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                        </div>
+                        <div class="why-content">
+                            <h3>No Technical Skills</h3>
+                            <p>Perfect for students and non-technical founders. No coding experience needed.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <div class="why-content">
+                            <h3>Fast Delivery</h3>
+                            <p>Your website is live in 24–48 hours. Start building your online presence today.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div class="why-content">
+                            <h3>Secure & Protected</h3>
+                            <p>SSL, DDoS protection, bot protection included. Enterprise-grade security.</p>
+                        </div>
+                    </div>
+                    <div class="why-item">
+                        <div class="why-icon">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </div>
+                        <div class="why-content">
+                            <h3>99.9% Uptime</h3>
+                            <p>Your site stays online. We guarantee reliable hosting with minimal downtime.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Use Cases</span>
+                <h2 class="section-title">Perfect For...</h2>
+            </div>
+            <div class="usecases-grid stagger-children">
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    </div>
+                    <h3>Students</h3>
+                    <p>Build your portfolio, CV, or startup idea website. Impress recruiters and professors.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </div>
+                    <h3>Freelancers</h3>
+                    <p>Showcase your work, skills, and client testimonials. Get hired faster.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    </div>
+                    <h3>Startups</h3>
+                    <p>Launch your MVP, landing page, or business site without the technical overhead.</p>
+                </div>
+                <div class="usecase-card">
+                    <div class="usecase-icon">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <h3>Local Businesses</h3>
+                    <p>Establish your online presence. Get found by local customers searching for your services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="reveal">
+        <div class="container">
+            <div class="founder-section">
+                <div class="founder-image reveal-left">MR</div>
+                <div class="founder-content reveal-right">
+                    <h2>Meet the Founder</h2>
+                    <p class="founder-role">Manish Roy — Founder & Owner</p>
+                    <p>Building simple and affordable web solutions for everyone. From students to startups, SubDM is designed with you in mind. Our mission is to make professional web presence accessible to everyone.</p>
+                    <a href="https://manishroy.me/" target="_blank" class="founder-link">
+                        Visit Portfolio 
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Powered By Section -->
+    <section class="reveal">
+        <div class="container">
+            <div class="store-section">
+                <h2>Powered by M Technology</h2>
+                <p>Building premium web solutions at affordable prices.</p>
+                <a href="https://mtechnology.dev/" target="_blank" class="button button-secondary">Visit M Technology</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store CTA -->
+    <section class="reveal">
+        <div class="container">
+            <div class="store-section">
+                <h2>Explore Digital Products & Tools</h2>
+                <p>Check out our store for templates, tools, and resources to boost your online presence.</p>
+                <a href="https://store.mtechnology.dev/" target="_blank" class="button button-primary">Visit Store</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="reveal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">FAQ</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-container stagger-children">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do I need hosting?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        No, we handle everything for you. We connect your website to third-party hosting platforms and manage all the technical setup. You just provide your details.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I use my own domain?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! You can connect your own custom domain to your subdm.site subdomain. We handle the DNS setup for you.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is SSL certificate included?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        100% included. All SubDM websites come with a free SSL certificate for secure HTTPS connections. Your visitors' data is always protected.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does setup take?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        24–48 hours from the time you place your order. We'll set up your website, configure your subdomain, and get everything live so you can start using it immediately.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I upgrade or modify my plan later?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely! You can upgrade to a higher plan, customize your design, or add new features anytime. We're here to grow with you.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if I'm not satisfied?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        We stand behind our work. Contact our support team within 7 days if you have concerns, and we'll fix it for free or offer a refund.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SubDM</h4>
+                    <ul class="footer-links">
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#preview">Preview</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://manishroy.me/" target="_blank">Founder</a></li>
+                        <li><a href="https://mtechnology.dev/" target="_blank">M Technology</a></li>
+                        <li><a href="https://store.mtechnology.dev/" target="_blank">Store</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#terms">Terms & Conditions</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 SubDM. All rights reserved.</p>
+                <p>Built by <a href="https://mtechnology.dev/" target="_blank">M Technology</a></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
