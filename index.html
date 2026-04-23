@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Enhanced SEO Meta Tags -->
-    <meta name="description" content="SubDM - Professional subdomain websites & hosting starting at ₹99/mo. Get yourname.subdm.site with SSL, 99.9% uptime. Perfect for students, freelancers & businesses. Setup in 24-48 hours.">
-    <meta name="keywords" content="subdomain website, subdomain hosting, subdm.site subdomain, portfolio website, landing page, affordable web hosting, SubDM, cheap hosting India, student website, business website, ₹99 hosting">
+    <meta name="description" content="SubDM - Professional subdomain websites & hosting starting at ₹350/year. Get yourname.subdm.site with SSL, 99.9% uptime. Perfect for students, freelancers & businesses. Setup in 24-48 hours.">
+    <meta name="keywords" content="subdomain website, subdomain hosting, subdm.site subdomain, portfolio website, landing page, affordable web hosting, SubDM, cheap hosting India, student website, business website, ₹350 hosting">
     <meta name="author" content="SubDM by M Technology">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://subdm.site/">
@@ -14,7 +14,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://subdm.site/">
-    <meta property="og:title" content="SubDM - Professional Subdomain Websites & Hosting from ₹99/mo">
+    <meta property="og:title" content="SubDM - Professional Subdomain Websites & Hosting from ₹350/year">
     <meta property="og:description" content="Get your own professional subdomain (yourname.subdm.site) with SSL, 99.9% uptime. Perfect for students, freelancers & small businesses.">
     <meta property="og:image" content="https://subdm.site/og-image.png">
     <meta property="og:site_name" content="SubDM">
@@ -24,7 +24,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://subdm.site/">
     <meta name="twitter:title" content="SubDM - Professional Subdomain Websites & Hosting">
-    <meta name="twitter:description" content="Get yourname.subdm.site with SSL & 99.9% uptime starting ₹99/mo">
+    <meta name="twitter:description" content="Get yourname.subdm.site with SSL & 99.9% uptime starting ₹350/year">
     <meta name="twitter:image" content="https://subdm.site/og-image.png">
     
     <!-- Additional SEO -->
@@ -51,6 +51,7 @@
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "customer service",
+            "email": "manishroy.contact@gmail.com",
             "availableLanguage": ["English", "Hindi"]
         }
     }
@@ -68,7 +69,7 @@
             {
                 "@type": "Offer",
                 "name": "Subdomain",
-                "price": "99",
+                "price": "350",
                 "priceCurrency": "INR",
                 "priceValidUntil": "2027-12-31",
                 "availability": "https://schema.org/InStock",
@@ -76,8 +77,8 @@
             },
             {
                 "@type": "Offer",
-                "name": "Monthly Hosting",
-                "price": "199",
+                "name": "Quarterly Hosting",
+                "price": "500",
                 "priceCurrency": "INR",
                 "priceValidUntil": "2027-12-31",
                 "availability": "https://schema.org/InStock",
@@ -121,7 +122,7 @@
     }
     </script>
     
-    <title>SubDM - Professional Subdomain Websites & Hosting from ₹99/mo | subdm.site</title>
+    <title>SubDM - Professional Subdomain Websites & Hosting from ₹350/year | subdm.site</title>
     
     <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1434,7 +1435,25 @@
             text-decoration: none;
         }
 
-        /* Responsive */
+        /* Responsive Optimization */
+        @media (min-width: 1440px) {
+            .container {
+                max-width: 1400px;
+            }
+            .hero-content h1 {
+                font-size: 4rem;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 95%;
+            }
+            .hero-wrapper {
+                gap: 2rem;
+            }
+        }
+
         @media (max-width: 1024px) {
             .hero-wrapper {
                 grid-template-columns: 1fr;
@@ -1589,6 +1608,34 @@
 
             .trust-badge-item {
                 justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.75rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .monthly-card, .pricing-card, .why-section, .store-section {
+                padding: 1.5rem 1rem;
+            }
+            .logo {
+                font-size: 1.4rem;
+            }
+            .hero-badge {
+                font-size: 0.7rem;
+            }
+        }
+
+        /* Utility for touch devices */
+        @media (hover: none) {
+            .tilt-card, .pricing-card, .preview-card {
+                transform: none !important;
+            }
+            .cursor-glow {
+                display: none !important;
             }
         }
 
@@ -2127,8 +2174,8 @@
                         <span>Launch your digital presence</span>
                     </div>
                     <h1>
-                        Professional <span class="gradient-text">Subdomain</span> & Hosting Starting at Just
-                        <span class="highlight">₹99/mo</span>
+                        Professional <span class="animated-gradient">Subdomain</span> & Hosting Starting at Just
+                        <span class="highlight">₹350/year</span>
                     </h1>
                     <p>Get your own subdomain (yourname.subdm.site) with SSL, DDoS protection, 99.9% uptime, and reliable static hosting. Perfect for portfolios, businesses, and startups.</p>
 
@@ -2148,7 +2195,7 @@
                     </div>
 
                     <div class="cta-buttons">
-                        <a href="#pricing" class="button button-primary">
+                        <a href="https://wa.me/85620943966749" class="button button-primary" target="_blank">
                             Get Started
                             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                         </a>
@@ -2262,14 +2309,14 @@
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                     </div>
                     <div class="monthly-content">
-                        <h3>Monthly Hosting</h3>
+                        <h3>Hosting Plan</h3>
                         <p>Reliable static hosting with 99.9% uptime, DDoS protection, and bot protection included.</p>
                         <ul class="monthly-features">
                             <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 99.9% Uptime</li>
                             <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> DDoS Protection</li>
                             <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Bot Protection</li>
                         </ul>
-                        <div class="monthly-price">₹199<span>/mo</span></div>
+                        <div class="monthly-price">₹500<span>/3 months</span></div>
                     </div>
                 </div>
                 <div class="monthly-card">
@@ -2277,14 +2324,14 @@
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
                     </div>
                     <div class="monthly-content">
-                        <h3>Subdomain</h3>
+                        <h3>SubDM Subdomain</h3>
                         <p>Get a professional subdomain (yourname.subdm.site) with SSL certificate included.</p>
                         <ul class="monthly-features">
                             <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> yourname.subdm.site</li>
                             <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> SSL Certificate</li>
                             <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Professional Identity</li>
                         </ul>
-                        <div class="monthly-price">₹99<span>/mo</span></div>
+                        <div class="monthly-price">₹350<span>/year</span></div>
                     </div>
                 </div>
             </div>
@@ -2315,7 +2362,7 @@
                         <li><span class="check">✓</span> Mobile-first responsive design</li>
                     </ul>
                     <div class="pricing-cta">
-                        <button class="button button-secondary" style="width: 100%;">Get Started</button>
+                        <a href="https://wa.me/85620943966749" class="button button-secondary" style="width: 100%;" target="_blank">Get Started</a>
                     </div>
                 </div>
 
@@ -2342,7 +2389,7 @@
                         <li><span class="check">✓</span> SSL certificate included</li>
                     </ul>
                     <div class="pricing-cta">
-                        <button class="button button-primary" style="width: 100%;">Get Started</button>
+                        <a href="https://wa.me/85620943966749" class="button button-primary" style="width: 100%;" target="_blank">Get Started</a>
                     </div>
                 </div>
 
@@ -2368,9 +2415,10 @@
                         <li><span class="check">✓</span> Priority support (2 weeks)</li>
                     </ul>
                     <div class="pricing-cta">
-                        <button class="button button-secondary" style="width: 100%;">Get Started</button>
+                        <a href="https://wa.me/85620943966749" class="button button-secondary" style="width: 100%;" target="_blank">Get Started</a>
                     </div>
                 </div>
+
             </div>
 
             <div class="pricing-note reveal">
@@ -2395,7 +2443,7 @@
                         </div>
                         <div class="why-content">
                             <h3>Affordable Pricing</h3>
-                            <p>Starting at just ₹99/month for a subdomain. That's less than a coffee for your digital identity.</p>
+                            <p>Starting at just ₹350/year for a subdomain. That's less than a cup of tea for your digital identity.</p>
                         </div>
                     </div>
                     <div class="why-item">
@@ -2517,17 +2565,6 @@
         </div>
     </section>
 
-    <!-- Store CTA -->
-    <section class="reveal">
-        <div class="container">
-            <div class="store-section">
-                <h2>Explore Digital Products & Tools</h2>
-                <p>Check out our store for templates, tools, and resources to boost your online presence.</p>
-                <a href="https://store.mtechnology.dev/" target="_blank" class="button button-primary">Visit Store</a>
-            </div>
-        </div>
-    </section>
-
     <!-- FAQ Section -->
     <section id="faq" class="reveal">
         <div class="container">
@@ -2616,7 +2653,6 @@
                     <ul class="footer-links">
                         <li><a href="https://manishroy.me/" target="_blank">Founder</a></li>
                         <li><a href="https://mtechnology.dev/" target="_blank">M Technology</a></li>
-                        <li><a href="https://store.mtechnology.dev/" target="_blank">Store</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -2624,7 +2660,7 @@
                     <ul class="footer-links">
                         <li><a href="#terms">Terms & Conditions</a></li>
                         <li><a href="#privacy">Privacy Policy</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="mailto:manishroy.contact@gmail.com" id="contact">Contact: manishroy.contact@gmail.com | +856 20 94 396 749</a></li>
                     </ul>
                 </div>
             </div>
